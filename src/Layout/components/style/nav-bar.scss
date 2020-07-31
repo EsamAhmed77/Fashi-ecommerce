@@ -156,10 +156,11 @@
         right: -8px;
         top: 62px;
         width: 340px;
-        background-color: #FFF;
-        transition: all ease-in-out .4s;
+        background-color: #fff;
+        transition: all ease-in-out 0.4s;
+        z-index: 99;
         @media (max-width: 991px) {
-          right: -86px;
+          right: -88px;
           width: 320px;
           top: 54px;
         }
@@ -377,9 +378,16 @@
       position: absolute;
       right: 100px;
       top: 10px;
+      .icons {
+        .divider {
+          width: 0px;
+          margin: 0 10px;
+        }
+      }
     }
   }
 }
+
 @media (min-width: 992px) {
   .navbar {
     .navbar-nav {
