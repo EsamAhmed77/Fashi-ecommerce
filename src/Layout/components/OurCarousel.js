@@ -6,7 +6,7 @@ import Carousel from "react-bootstrap/Carousel";
 const OurCarousel = () => {
   return (
     <Carousel indicators={false} fade={true}>
-      <Carousel.Item className="active">
+      <Carousel.Item>
         <div
           style={{
             background: `url(${"/img/master-slide-02.jpg"}) center / auto 100% no-repeat`,
@@ -15,36 +15,62 @@ const OurCarousel = () => {
         ></div>
         <div className="caption">
           <div className="caption-content">
-            <h4 className="collection">Women Collection 2020</h4>
-            <span className="new-arrival">NEW ARRIVALS</span>
-            <a className="caption-btn" href="/">
+            <h4 className="collection" id="collection-1">
+              Women Collection 2020
+            </h4>
+            <span className="new-arrival" id="new-arrival-1">
+              NEW ARRIVALS
+            </span>
+            <a className="caption-btn" id="caption-btn-1" href="/">
               SHOP NOW
             </a>
           </div>
         </div>
       </Carousel.Item>
-      {/* <Carousel.Item>
+      <Carousel.Item>
         <div
-          style={{ background: `url(${"/img/master-slide-03.jpg"}) center / auto 100% no-repeat`}}
+          style={{
+            background: `url(${"/img/master-slide-03.jpg"}) center / auto 100% no-repeat`,
+          }}
           className="carousel-img"
         ></div>
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item> */}
-      {/* <Carousel.Item>
+        <div className="caption">
+          <div className="caption-content">
+            <h4 className="collection" id="collection-2">
+              Women Collection 2020
+            </h4>
+            <span className="new-arrival" id="new-arrival-2">
+              NEW ARRIVALS
+            </span>
+            <a className="caption-btn" id="caption-btn-2" href="/">
+              SHOP NOW
+            </a>
+          </div>
+        </div>
+      </Carousel.Item>
+      <Carousel.Item>
         <div
-          style={{ background: `url(${"/img/master-slide-04.jpg"}) center / auto 100% no-repeat`}}
+          style={{
+            background: `url(${"/img/master-slide-04.jpg"}) center / auto 100% no-repeat`,
+          }}
           className="carousel-img"
         ></div>
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item> */}
+        <div className="caption">
+          <div className="caption-content">
+            <div>
+              <h4 className="collection" id="collection-3">
+                Women Collection 2020
+              </h4>
+            </div>
+            <span className="new-arrival" id="new-arrival-3">
+              NEW ARRIVALS
+            </span>
+            <a className="caption-btn" id="caption-btn-3" href="/">
+              SHOP NOW
+            </a>
+          </div>
+        </div>
+      </Carousel.Item>
     </Carousel>
   );
 };
