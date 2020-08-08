@@ -2,15 +2,19 @@ import React, { useState } from "react";
 import "./style/Main.scss";
 import swal from "sweetalert";
 
-export const FavoriteProduct = (props) => {
+const FavoriteProduct = (props) => {
   const [current, setCurrent] = useState("white-heart");
 
   return (
     <>
       <div
-        onClick={() => {
-          setCurrent("red-heart");
-          swal(props.title, "is added to wishlist !", "success");
+        onClick={(e) => {
+          if (current === "white-heart")
+            return (
+              setCurrent("red-heart"),
+              swal(props.title, "is added to wishlist !", "success")
+            );
+          else if (current === "red-heart") return setCurrent("white-heart");
         }}
       >
         <svg viewBox="-1 -2 34 33">
@@ -24,3 +28,5 @@ export const FavoriteProduct = (props) => {
     </>
   );
 };
+
+export default FavoriteProduct;

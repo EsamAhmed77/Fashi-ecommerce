@@ -7,7 +7,7 @@ import Container from "react-bootstrap/Container";
 import "./style/Main.scss";
 import "./style/productsCarousel.scss";
 //
-import { FavoriteProduct } from "./blocks";
+import FavoriteProduct from "./blocks/favoriteModal";
 //
 const items = [
   {

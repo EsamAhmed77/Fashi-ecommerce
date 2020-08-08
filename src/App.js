@@ -8,6 +8,7 @@ import NavBar from "./Layout/components/NavBar";
 import OurCarousel from "./Layout/components/OurCarousel";
 import CatGrid from "./Layout/components/CatGrid";
 import ProductsCarousel from "./Layout/components/ProductsCarousel";
+import Timer from "./Layout/components/Timer";
 //
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <OurCarousel />
       <CatGrid />
       <ProductsCarousel />
+      <Timer />
     </Container>
   );
 };
