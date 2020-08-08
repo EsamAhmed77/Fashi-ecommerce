@@ -6,9 +6,75 @@ import Container from "react-bootstrap/Container";
 //
 import "./style/Main.scss";
 import "./style/productsCarousel.scss";
+//
+import { FavoriteProduct } from "./blocks";
+//
+const items = [
+  {
+    id: 1,
+    src: "/img/item-02.jpg",
+    title: "Herschel supply co 25l",
+    price: "$75.00",
+    newProduct: "new-product",
+  },
+  {
+    id: 2,
+    src: "/img/item-03.jpg",
+    title: "Denim jacket blue",
+    price: "$92.50",
+  },
+  {
+    id: 3,
+    src: "/img/item-05.jpg",
+    title: "Coach slim easton black",
+    price: "$165.90",
+  },
+  {
+    id: 4,
+    src: "/img/item-07.jpg",
+    title: "Frayed denim shorts",
+    price: "$29.50",
+    discount: "$15.50",
+    saleProduct: "sale-product",
+  },
+];
 
 class ProductsCarousel extends React.Component {
-  state = { galleryItems: [4], currentIndex: 0 };
+  state = {
+    galleryItems: (items || []).map(
+      ({ id, src, title, price, newProduct, discount, saleProduct }) => (
+        <div key={id} className="item">
+          <div
+            className={`item-img ${newProduct ? newProduct : ""} ${
+              saleProduct ? saleProduct : ""
+            }`}
+          >
+            <div className="item-fav-icon">
+              <FavoriteProduct title={title} />
+            </div>
+            <img className="w-100" src={src} alt="" />
+            <a href="/" className="add-btn">
+              add to cart
+            </a>
+          </div>
+          <div className="item-description">
+            <a href="/">{title}</a>
+            <div>
+              {discount ? (
+                <>
+                  <span className="old-price">{price}</span>
+                  <span className="new-price">{discount}</span>
+                </>
+              ) : (
+                <span>{price}</span>
+              )}
+            </div>
+          </div>
+        </div>
+      )
+    ),
+    currentIndex: 0,
+  };
 
   responsive = {
     0: { items: 1 },
@@ -34,7 +100,7 @@ class ProductsCarousel extends React.Component {
         <div className="section-header">
           <h2>Featured Products</h2>
         </div>
-        <Container className="p-0">
+        <Container>
           <AliceCarousel
             items={galleryItems}
             responsive={this.responsive}
@@ -46,82 +112,18 @@ class ProductsCarousel extends React.Component {
             mouseTrackingEnabled={true}
             slideToIndex={currentIndex}
             onSlideChanged={this.onSlideChanged}
+          />
+          <button
+            className="carousel-control prev-btn"
+            onClick={() => this.slidePrev()}
           >
-            <div className="item">
-              <div className="item-img new-product">
-                <div className="item-fav-icon">
-                  <i className="far fa-heart"></i>
-                </div>
-                <img className="w-100" src="/img/item-02.jpg" alt="" />
-                <a href="/" className="add-btn">
-                  add to cart
-                </a>
-              </div>
-              <div className="item-description">
-                <a href="/">Herschel supply co 25l</a>
-                <div>
-                  <span>$75.00</span>
-                </div>
-              </div>
-            </div>
-            <div className="item">
-              <div className="item-img">
-                <div className="item-fav-icon">
-                  <i className="far fa-heart"></i>
-                </div>
-                <img className="w-100" src="/img/item-03.jpg" alt="" />
-                <a href="/" className="add-btn">
-                  add to cart
-                </a>
-              </div>
-              <div className="item-description">
-                <a href="/">Denim jacket blue</a>
-                <div>
-                  <span>$92.50</span>
-                </div>
-              </div>
-            </div>
-            <div className="item">
-              <div className="item-img">
-                <div className="item-fav-icon">
-                  <i className="far fa-heart"></i>
-                </div>
-                <img className="w-100" src="/img/item-05.jpg" alt="" />
-                <a href="/" className="add-btn">
-                  add to cart
-                </a>
-              </div>
-              <div className="item-description">
-                <a href="/">Coach slim easton black</a>
-                <div>
-                  <span>$165.90</span>
-                </div>
-              </div>
-            </div>
-            <div className="item">
-              <div className="item-img sale-product">
-                <div className="item-fav-icon">
-                  <i className="far fa-heart"></i>
-                </div>
-                <img className="w-100" src="/img/item-07.jpg" alt="" />
-                <a href="/" className="add-btn">
-                  add to cart
-                </a>
-              </div>
-              <div className="item-description">
-                <a href="/">Frayed denim shorts</a>
-                <div>
-                  <span className="old-price">$29.50</span>
-                  <span className="new-price">$15.90</span>
-                </div>
-              </div>
-            </div>
-          </AliceCarousel>
-          <button className="prev-btn" onClick={() => this.slidePrev()}>
-            <i class="fas fa-angle-left"></i>
+            <i className="fas fa-angle-left"></i>
           </button>
-          <button className="next-btn" onClick={() => this.slideNext()}>
-            <i class="fas fa-angle-right"></i>
+          <button
+            className="carousel-control next-btn"
+            onClick={() => this.slideNext()}
+          >
+            <i className="fas fa-angle-right"></i>
           </button>
         </Container>
       </div>

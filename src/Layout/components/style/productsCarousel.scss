@@ -14,138 +14,146 @@
   .container {
     max-width: 1200px;
     position: relative;
-  }
-  .item {
-    margin: 0 15px;
-    .item-img {
-      margin-bottom: 20px;
-      position: relative;
-      overflow: hidden;
-      transition: all 0.5s;
-      &.new-product::before,
-      &.sale-product::before {
-        z-index: 100;
-        content: "New";
-        position: absolute;
-        top: 12px;
-        left: 12px;
-        background-color: #66a8a6;
-        border-radius: 11px;
-        width: 50px;
-        text-align: center;
-        font-size: 13px;
-        font-family: sans-serif;
-        padding: 2px 0;
-        font-weight: 400;
-        color: #fff;
+    .carousel-control {
+      position: absolute;
+      top: 45%;
+      transform: translateY(-50%);
+      border: none;
+      background-color: transparent;
+      font-size: 30px;
+      &:focus {
+        outline: none !important;
       }
-      &.sale-product::before {
-        content: "Sale";
-        background-color: #e65540;
-      }
-      .item-fav-icon {
-        z-index: 99;
-        position: absolute;
-        top: 12px;
-        right: 12px;
-        color: #fff;
-        font-size: 0;
-        transition: all 0.5s;
-        cursor: pointer;
-      }
-      .add-btn {
-        position: absolute;
-        z-index: 99;
-        left: 50%;
-        bottom: -60px;
-        transform: translateX(-50%);
-        text-transform: uppercase;
-        color: #fff;
-        background-color: black;
-        width: 150px;
-        text-align: center;
-        padding: 8px 0;
-        border-radius: 20px;
-        transition: all 0.5s;
-        opacity: 0;
+      i {
+        color: #8a84847a;
+        font-size: 28px;
         &:hover {
-          text-decoration: none;
-          background-color: #e65540;
+          color: gray;
         }
       }
-      &::after {
-        z-index: 88;
-        position: absolute;
-        top: 0;
-        left: 0;
-        content: " ";
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.212);
-        opacity: 0;
-        transition: opacity 0.4s;
+      &.prev-btn {
+        left: 5px;
       }
-      &:hover {
-        .add-btn {
-          opacity: 1;
-          bottom: 20px;
-        }
-        .item-fav-icon {
-          font-size: 18px;
-        }
-        &::after {
-          opacity: 1;
-        }
+      &.next-btn {
+        right: 5px;
       }
     }
 
-    .item-description {
-      a {
-        color: #4d4747;
-        font-size: 16px;
-        transition: all 0.3s;
-        line-height: 1.5;
+    .item {
+      margin: 0 15px;
+      .item-img {
+        margin-bottom: 20px;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.5s;
+        &.new-product::before,
+        &.sale-product::before {
+          z-index: 100;
+          content: "New";
+          position: absolute;
+          top: 12px;
+          left: 12px;
+          background-color: #66a8a6;
+          border-radius: 11px;
+          width: 50px;
+          text-align: center;
+          font-size: 13px;
+          font-family: sans-serif;
+          padding: 2px 0;
+          font-weight: 400;
+          color: #fff;
+        }
+        &.sale-product::before {
+          content: "Sale";
+          background-color: #e65540;
+        }
+        .item-fav-icon {
+          z-index: 99;
+          position: absolute;
+          top: 12px;
+          right: 12px;
+          color: #fff;
+          transition: all 0.5s;
+          width: 0px;
+          cursor: pointer;
+          background-color: transparent;
+          border: none;
+          &:hover {
+            .heart {
+              fill: white;
+            }
+          }
+        }
+        .add-btn {
+          position: absolute;
+          z-index: 99;
+          left: 50%;
+          bottom: -60px;
+          transform: translateX(-50%);
+          text-transform: uppercase;
+          color: #fff;
+          background-color: black;
+          width: 150px;
+          text-align: center;
+          padding: 8px 0;
+          border-radius: 20px;
+          transition: all 0.5s;
+          opacity: 0;
+          &:hover {
+            text-decoration: none;
+            background-color: #e65540;
+          }
+        }
+        &::after {
+          z-index: 88;
+          position: absolute;
+          top: 0;
+          left: 0;
+          content: " ";
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.212);
+          opacity: 0;
+          transition: opacity 0.4s;
+        }
         &:hover {
-          text-decoration: none;
-          color: #e65540;
+          .add-btn {
+            opacity: 1;
+            bottom: 20px;
+          }
+          .item-fav-icon {
+            width: 22px;
+          }
+          &::after {
+            opacity: 1;
+          }
         }
       }
-      span {
-        font-size: 16px;
-        color: #4d4747;
-        text-transform: uppercase;
-        margin: 5px 5px 0 0;
-        &.old-price {
-          text-decoration: line-through;
+
+      .item-description {
+        a {
+          color: #4d4747;
+          font-size: 16px;
+          transition: all 0.3s;
+          line-height: 1.5;
+          &:hover {
+            text-decoration: none;
+            color: #e65540;
+          }
         }
-        &.new-price {
-          color: rgb(145, 10, 10);
+        span {
+          font-size: 16px;
+          color: #4d4747;
+          text-transform: uppercase;
+          margin: 5px 5px 0 0;
+          &.old-price {
+            text-decoration: line-through;
+          }
+          &.new-price {
+            color: rgb(145, 10, 10);
+          }
         }
       }
     }
-  }
-}
-button {
-  position: absolute;
-  top: 45%;
-  transform: translateY(-50%);
-  border: none;
-  background-color: transparent;
-  font-size: 30px;
-  &:focus {
-    outline: none !important;
-  }
-  i {
-    color: #8a84847a;
-    font-size: 28px;
-    &:hover {
-      color: gray;
-    }
-  }
-  &.prev-btn {
-    left: 0px;
-  }
-  &.next-btn {
-    right: 0px;
   }
 }

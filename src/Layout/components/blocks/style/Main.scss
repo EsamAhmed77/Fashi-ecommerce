@@ -1,0 +1,28 @@
+// FavoriteProduct
+.white-heart {
+  fill: transparent;
+  stroke: white;
+}
+
+.red-heart {
+  fill: #e65540 !important;
+  stroke: #e65540 !important;
+}
+//
+//modal
+.swal-title {
+  font-size: 20px;
+}
+.swal-button {
+  background-color: #e65540 !important;
+  font-size: 16px;
+  padding: 10px 28px;
+  transition: all 0.3s;
+  border-radius: 20px;
+  outline: none !important;
+  box-shadow: none !important;
+
+  &:hover {
+    background-color: rgb(31, 31, 31) !important;
+  }
+}
