@@ -4,7 +4,6 @@ import swal from "sweetalert";
 
 const FavoriteProduct = (props) => {
   const [current, setCurrent] = useState("white-heart");
-  const [clicked, setClicked] = useState(false);
 
   return (
     <>
