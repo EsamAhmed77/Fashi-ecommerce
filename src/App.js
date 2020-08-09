@@ -10,6 +10,7 @@ import CatGrid from "./Layout/components/CatGrid";
 import ProductsCarousel from "./Layout/components/ProductsCarousel";
 import Timer from "./Layout/components/Timer";
 import Blogs from "./Layout/components/Blogs";
+import Instagram from "./Layout/components/Instagram";
 //
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
       <ProductsCarousel />
       <Timer />
       <Blogs />
+      <Instagram />
     </Container>
   );
 };
