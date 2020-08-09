@@ -1,5 +1,5 @@
 .blogs {
-  padding: 94px 0 65px;
+  padding: 94px 0 85px;
   .container {
     max-width: 1200px !important;
   }
@@ -80,5 +80,10 @@
     .blog-description {
       font-size: 13px !important;
     }
+  }
+}
+@media (min-width: 768px) {
+  .blog {
+    max-height: 420px;
   }
 }
