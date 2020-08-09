@@ -9,6 +9,7 @@ import OurCarousel from "./Layout/components/OurCarousel";
 import CatGrid from "./Layout/components/CatGrid";
 import ProductsCarousel from "./Layout/components/ProductsCarousel";
 import Timer from "./Layout/components/Timer";
+import Blogs from "./Layout/components/Blogs";
 //
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <CatGrid />
       <ProductsCarousel />
       <Timer />
+      <Blogs />
     </Container>
   );
 };

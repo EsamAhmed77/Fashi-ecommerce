@@ -7,7 +7,6 @@
   .section-img-container {
     position: relative;
     overflow: hidden;
-    margin-bottom: 30px;
     &:hover {
       img {
         transform: scale(1.1);
@@ -82,5 +81,10 @@
         }
       }
     }
+  }
+}
+@media (max-width: 991px) {
+  .md-margin {
+    margin-bottom: 30px;
   }
 }

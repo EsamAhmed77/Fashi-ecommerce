@@ -71,3 +71,33 @@ export const category = [
     register: "sign up",
   },
 ];
+
+export const blogs = [
+  {
+    id: 1,
+    img: "img/blog-01.jpg",
+    title: "Black Friday Guide: Best Sales & Discount Codes",
+    blogger: "Nancy Ward",
+    date: "July 22, 2020",
+    description:
+      "Duis ut velit gravida nibh bibendum commodo. Sus-pendisse pellentesque mattis augue id euismod. Inter-dum et malesuada fames",
+  },
+  {
+    id: 2,
+    img: "img/blog-02.jpg",
+    title: "The White Sneakers Nearly Every Fashion Girls Own",
+    blogger: "Nancy Ward",
+    date: "July 22, 2020",
+    description:
+      "Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex nulla in tellus. Nullam nec ornare tellus, ac fringilla lacus. Ut sit ame",
+  },
+  {
+    id: 3,
+    img: "img/blog-03.jpg",
+    title: "New York SS 2018 Street Style: Annina Mislin",
+    blogger: "Nancy Ward",
+    date: "July 1, 2020",
+    description:
+      "Proin nec vehicula lorem, a efficitur ex. Nam vehicula nulla vel erat tincidunt, sed hendrerit ligula porttitor. Fusce sit amet maximus nunc",
+  },
+];

@@ -9,7 +9,7 @@ const Timer = () => {
       <Container>
         <Row>
           <Col sm={10} md={8} lg={6} className="m-auto">
-            <div className="section-img-container">
+            <div className="section-img-container md-margin">
               <img className="w-100" src="img/banner-08.jpg" alt="IMG-banner" />
               <div className="img-content">
                 <h3>The beauty</h3>
