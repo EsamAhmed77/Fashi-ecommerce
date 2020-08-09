@@ -9,36 +9,7 @@ import "./style/productsCarousel.scss";
 //
 import FavoriteProduct from "./blocks/favoriteModal";
 //
-const items = [
-  {
-    id: 1,
-    src: "/img/item-02.jpg",
-    title: "Herschel supply co 25l",
-    price: "$75.00",
-    newProduct: "new-product",
-  },
-  {
-    id: 2,
-    src: "/img/item-03.jpg",
-    title: "Denim jacket blue",
-    price: "$92.50",
-  },
-  {
-    id: 3,
-    src: "/img/item-05.jpg",
-    title: "Coach slim easton black",
-    price: "$165.90",
-  },
-  {
-    id: 4,
-    src: "/img/item-07.jpg",
-    title: "Frayed denim shorts",
-    price: "$29.50",
-    discount: "$15.50",
-    saleProduct: "sale-product",
-  },
-];
-
+import { items } from "../../api/api";
 class ProductsCarousel extends React.Component {
   state = {
     galleryItems: (items || []).map(
