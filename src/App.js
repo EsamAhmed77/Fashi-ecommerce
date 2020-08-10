@@ -11,6 +11,7 @@ import ProductsCarousel from "./Layout/components/ProductsCarousel";
 import Timer from "./Layout/components/Timer";
 import Blogs from "./Layout/components/Blogs";
 import Instagram from "./Layout/components/Instagram";
+import Shipping from "./Layout/components/Shipping";
 //
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
       <Timer />
       <Blogs />
       <Instagram />
+      <Shipping />
     </Container>
   );
 };

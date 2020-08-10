@@ -14,7 +14,7 @@ const Instagram = () => {
             <img className="w-100" src={src} alt="gallery" />
             <a href="/">
               <span className="likes">
-                <i class="far fa-heart"></i>
+                <i className="far fa-heart"></i>
                 <span>39</span>
               </span>
               <div className="picture-story">
