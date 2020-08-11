@@ -1,51 +1,56 @@
 .shipping {
-  display: flex;
-  @media (max-width: 576px) {
+  font-family: sans-serif;
+  line-height: 1.8;
+  font-size: 14px;
+  padding: 62px 0 48px;
+  .shipping-row {
+    display: flex;
+    margin: auto;
+    padding: 0 20px;
+    .shipping-offers {
+      width: calc(100% / 3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 16px 15px;
+      h4 {
+        color: #555555da;
+        font-size: 19px;
+        text-align: center;
+        margin: 0 0 5px;
+      }
+      span {
+        text-align: center;
+        color: #888888d7;
+        font-style: italic;
+      }
+      a {
+        color: #888888d7;
+        font-style: italic;
+        text-align: center;
+        text-decoration: none !important;
+        transition: all 0.3s;
+        &:hover {
+          color: #e65540;
+        }
+      }
+    }
+    .divider {
+      border-right: 1px solid #d9d9d9;
+      border-left: 1px solid #d9d9d9;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .shipping-row {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  font-family: sans-serif;
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 20px;
-  line-height: 1.8;
-  font-size: 14px;
-  .shipping-offers {
-    width: calc(100% / 3);
-    @media (max-width: 576px) {
+    .shipping-offers {
       width: 100%;
     }
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 16px 15px;
-    h4 {
-      color: #555555f1;
-      font-size: 19px;
-      text-align: center;
-      margin: 0 0 5px;
-    }
-    span {
-      text-align: center;
-      color: #888888;
-      font-style: italic;
-    }
-    a {
-      color: #888888;
-      font-style: italic;
-      text-align: center;
-      text-decoration: none !important;
-      transition: all 0.3s;
-      &:hover {
-        color: #e65540;
-      }
-    }
-  }
-  .divider {
-    border-right: 1px solid #d9d9d9;
-    border-left: 1px solid #d9d9d9;
-    @media (max-width: 576px) {
+    .divider {
       border-top: 1px solid #d9d9d9;
       border-bottom: 1px solid #d9d9d9;
       border-right: none;
