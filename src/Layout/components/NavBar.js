@@ -6,24 +6,24 @@ import "./style/nav-bar.scss";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Nav from "react-bootstrap/Nav";
-
+//
+import ProductsCart from "./blocks/ProductsCart";
 const NavBar = () => {
   const [currency, setCurrency] = useState("USA");
   const [visible, setVisible] = useState("d-none");
   const [cartVisibility, setCartVisibility] = useState("d-none");
-
+  const [hover, setHover] = useState("");
   //
   const onDropDownClick = (e) => {
     e.preventDefault();
     if (visible === "d-none") setVisible("d-block");
     else setVisible("d-none");
   };
+
   const onCartClick = (e) => {
-    e.preventDefault();
     if (cartVisibility === "d-none") setCartVisibility("d-block");
     else setCartVisibility("d-none");
   };
-
   return (
     <div className="nav-bar">
       <div className="top-nav-bar">
@@ -144,55 +144,12 @@ const NavBar = () => {
                 </a>
               </div>
               <div className="divider"></div>
-              <div
-                onClick={onCartClick}
-                className="cart-icon"
-              >
+              <div onClick={() => onCartClick()} className="cart-icon">
                 <img src="img/icon/icon-header-02.png" alt="cart" />
                 <div className="cart-orders"></div>
               </div>
             </div>
-            <div className={`products-cart ${cartVisibility}`}>
-              <div className="cart">
-                <div className="all-products">
-                  <div className="product">
-                    <div className="product-img">
-                      <img src="img/item-cart-01.jpg" alt="product-1" />
-                      <span>X</span>
-                    </div>
-                    <div className="product-details">
-                      <a href="/">White Shirt With Pleat Detail Back</a>
-                      <span>1 x $19.00</span>
-                    </div>
-                  </div>
-                  <div className="product">
-                    <div className="product-img">
-                      <img src="img/item-cart-02.jpg" alt="product-2" />
-                      <span>X</span>
-                    </div>
-                    <div className="product-details">
-                      <a href="/">Converse All Star Hi Black Canvas</a>
-                      <span>1 x $39.00</span>
-                    </div>
-                  </div>
-                  <div className="product">
-                    <div className="product-img">
-                      <img src="img/item-cart-03.jpg" alt="product-3" />
-                      <span>X</span>
-                    </div>
-                    <div className="product-details">
-                      <a href="/">Nixon Porter Leather Watch In Tan</a>
-                      <span>1 x $17.00</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="total-price text-right">Total: $75.00</div>
-                <div className="cart-btns">
-                  <a href="/">VIEW CART</a>
-                  <a href="/">CHECK OUT</a>
-                </div>
-              </div>
-            </div>
+            <ProductsCart show={cartVisibility} />
           </div>
         </Navbar>
       </div>
