@@ -12,6 +12,7 @@ import Timer from "./Layout/components/Timer";
 import Blogs from "./Layout/components/Blogs";
 import Instagram from "./Layout/components/Instagram";
 import Shipping from "./Layout/components/Shipping";
+import Footer from "./Layout/components/Footer";
 //
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
       <Blogs />
       <Instagram />
       <Shipping />
+      <Footer />
     </Container>
   );
 };

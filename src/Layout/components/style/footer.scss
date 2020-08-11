@@ -1,0 +1,128 @@
+.footer {
+  padding: 45px;
+  line-height: 1.5;
+  font-family: sans-serif;
+  background-color: #f0f0f0;
+  .headers {
+    h4 {
+      font-weight: bold;
+      font-size: 15px;
+      color: #222222;
+      line-height: 1.5;
+      text-transform: uppercase;
+      padding-bottom: 25px;
+    }
+  }
+  .footer-row {
+    display: flex;
+    padding-bottom: 90px;
+    .get-in-touch {
+      flex-basis: 33%;
+      padding: 30px 15px 0;
+      p {
+        max-width: 480px;
+        font-size: 14px;
+        color: #555555;
+        line-height: 1.8;
+        margin-bottom: 25px;
+      }
+      .social-media {
+        ul {
+          li {
+            display: inline-block;
+            margin-right: 20px;
+            a {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+    .footer-lists {
+      flex-basis: 13%;
+      padding: 30px 15px 0;
+      li {
+        margin-bottom: 12px;
+        text-transform: capitalize;
+        font-size: 14px;
+      }
+    }
+    .sub {
+      flex-basis: 28%;
+      padding: 30px 15px 0;
+      input {
+        outline: none !important;
+        border: none;
+        background-color: transparent;
+        font-size: 13px;
+        border-bottom: 1px solid #ccc;
+        padding: 0 0 5px;
+        font-weight: 400;
+        color: #555555;
+        width: 100%;
+        margin-bottom: 20px;
+        transition: all ease-out 0.8s;
+        &:focus::placeholder {
+          color: transparent;
+        }
+        &:focus {
+          border-bottom: 1px solid #e65540;
+        }
+      }
+      button {
+        outline: none !important;
+        border: none;
+        text-transform: uppercase;
+        background-color: #111111;
+        color: #fff;
+        border-radius: 24px;
+        width: 170px;
+        height: 46px;
+        font-size: 15px;
+        transition: all 0.3s;
+        letter-spacing: 1px;
+        &:hover {
+          background-color: #e65540;
+        }
+      }
+    }
+    a {
+      color: #888888;
+      text-decoration: none !important;
+      transition: all 0.3s;
+      &:hover {
+        color: #e65540;
+      }
+    }
+  }
+  .copyrights {
+    a {
+      margin-right: 5px;
+    }
+    .copy {
+      font-size: 13px;
+      color: #888888;
+      line-height: 1.8;
+      padding-top: 20px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .footer {
+    padding: 45px 0px 45px;
+  }
+  .footer-row {
+    flex-wrap: wrap;
+    .get-in-touch {
+      flex-basis: 100% !important;
+    }
+    .footer-lists {
+      flex-basis: 33% !important;
+      padding-top: 20px !important;
+    }
+    .sub {
+      flex-basis: 70% !important;
+    }
+  }
+}
