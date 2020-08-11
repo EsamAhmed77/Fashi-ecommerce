@@ -15,6 +15,7 @@
   }
   .footer-row {
     display: flex;
+    padding-bottom: 90px;
     .get-in-touch {
       flex-basis: 33%;
       padding: 30px 15px 0;
@@ -92,6 +93,17 @@
       &:hover {
         color: #e65540;
       }
+    }
+  }
+  .copyrights {
+    a {
+      margin-right: 5px;
+    }
+    .copy {
+      font-size: 13px;
+      color: #888888;
+      line-height: 1.8;
+      padding-top: 20px;
     }
   }
 }

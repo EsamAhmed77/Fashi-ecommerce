@@ -116,6 +116,26 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <div className="copyrights text-center">
+        <a href="/">
+          <img src="img/icon/paypal.png" alt="companies" />
+        </a>
+        <a href="/">
+          <img src="img/icon/visa.png" alt="companies" />
+        </a>
+        <a href="/">
+          <img src="img/icon/mastercard.png" alt="companies" />
+        </a>
+        <a href="/">
+          <img src="img/icon/express.png" alt="companies" />
+        </a>
+        <a href="/">
+          <img src="img/icon/discover.png" alt="companies" />
+        </a>
+        <div className="copy">
+          Copyright © 2017 Colorlib. All rights reserved.
+        </div>
+      </div>
     </div>
   );
 };
