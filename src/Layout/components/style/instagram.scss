@@ -1,0 +1,114 @@
+.instagram-section {
+  padding: 50px 0;
+  .section-header {
+    padding: 0 10px;
+    margin-bottom: 50px;
+    h3 {
+      margin: 0 auto;
+      font-size: 2rem;
+      font-weight: 700;
+      width: fit-content;
+    }
+  }
+  .insta-imgs-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    .img {
+      position: relative;
+      overflow: hidden;
+      width: calc(100% / 5);
+      &:hover {
+        a,
+        .likes,
+        .picture-story {
+          opacity: 1;
+          &.likes {
+            transform: translate(40px, 30px);
+          }
+          &.picture-story {
+            bottom: 10%;
+          }
+        }
+      }
+      a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #000000e3;
+        text-decoration: none !important;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: all 0.3s;
+        .likes {
+          color: #cccccc;
+          font-size: 18px;
+          position: absolute;
+          transform: translate(-50px, -50px);
+          opacity: 0;
+          transition: all 0.4s;
+          i {
+            color: #cccccc;
+            margin-right: 5px;
+            vertical-align: middle;
+          }
+          span {
+            font-size: 14px;
+            font-weight: 300;
+            vertical-align: baseline;
+          }
+        }
+        .picture-story {
+          padding: 0 20px 0 40px;
+          position: absolute;
+          opacity: 0;
+          bottom: -40%;
+          transition: all 0.4s;
+          p,
+          .taken-by {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #cccccc;
+            &p {
+              max-height: 138px;
+              font-weight: inherit;
+            }
+            &.taken-by {
+              color: #b1b1b1 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.white-heart {
+  fill: transparent;
+  stroke: white;
+}
+
+@media (max-width: 1360px) {
+  .img {
+    width: calc(100% / 4) !important;
+  }
+}
+@media (max-width: 1200px) {
+  .img {
+    width: calc(100% / 3) !important;
+  }
+  .picture-story {
+    p {
+      font-size: 15px !important;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .img {
+    width: calc(100% / 2) !important;
+  }
+}
+@media (max-width: 576px) {
+  .img {
+    width: calc(100% / 1) !important;
+  }
+}

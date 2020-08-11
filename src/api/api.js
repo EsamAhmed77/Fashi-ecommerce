@@ -101,3 +101,25 @@ export const blogs = [
       "Proin nec vehicula lorem, a efficitur ex. Nam vehicula nulla vel erat tincidunt, sed hendrerit ligula porttitor. Fusce sit amet maximus nunc",
   },
 ];
+export const instagram = [
+  {
+    id: 1,
+    src: "img/gallery-03.jpg",
+  },
+  {
+    id: 2,
+    src: "img/gallery-07.jpg",
+  },
+  {
+    id: 3,
+    src: "img/gallery-09.jpg",
+  },
+  {
+    id: 4,
+    src: "img/gallery-13.jpg",
+  },
+  {
+    id: 5,
+    src: "img/gallery-15.jpg",
+  },
+];
