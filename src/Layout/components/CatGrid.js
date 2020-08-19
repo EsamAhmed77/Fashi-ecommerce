@@ -1,5 +1,6 @@
 ////categories using grid css//
 import React from "react";
+import { Link } from "react-router-dom";
 import "./style/cat-grid.scss";
 import Container from "react-bootstrap/Container";
 import { category } from "../../api/api";
@@ -34,29 +35,17 @@ const CatGrid = () => {
                   <div className={offer}>
                     <h2>{header}</h2>
                     <p>{paragraph}</p>
-                    <a href="/">{register}</a>
+                    <Link to="/">{register}</Link>
                   </div>
                 </>
               ) : (
                 <>
-                  <a href="/">{productType}</a>
+                  <Link to="/Cart">{productType}</Link>
                 </>
               )}
             </div>
           )
         )}
-        {/* 
-        <div className="category-offer box6">
-          <img className="w-100" src="" alt="bg" />
-          <div className="offer">
-            <h2>SIGN UP & GET 20% OFF</h2>
-            <p>
-              Be the frist to know about the latest fashion news and get
-              exclu-sive offers
-            </p>
-            <a href="/">sign up</a>
-          </div>
-        </div> */}
       </Container>
     </div>
   );

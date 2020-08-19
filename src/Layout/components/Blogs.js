@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import "./style/blogs.scss";
 import { blogs } from "../../api/api";
@@ -14,12 +15,12 @@ const Blogs = () => {
           {blogs.map(({ id, img, title, blogger, date, description }) => (
             <Col key={id} sm={10} md={4} className="m-auto">
               <div className="blog">
-                <a href="/" className="blog-img">
+                <Link to="/" className="blog-img">
                   <img className="w-100" src={img} alt="blog" />
-                </a>
+                </Link>
                 <div className="blog-info">
                   <h4>
-                    <a href="/">{title}</a>
+                    <Link to="/">{title}</Link>
                   </h4>
                   <div>
                     <span className="by-on">by</span>

@@ -1,5 +1,6 @@
 import React from "react";
 import "./style/carousel.scss";
+import { Link } from "react-router-dom";
 //
 import Carousel from "react-bootstrap/Carousel";
 
@@ -21,9 +22,9 @@ const OurCarousel = () => {
             <span className="new-arrival" id="new-arrival-1">
               NEW ARRIVALS
             </span>
-            <a className="caption-btn" id="caption-btn-1" href="/">
+            <Link className="caption-btn" id="caption-btn-1" to="/Cart">
               SHOP NOW
-            </a>
+            </Link>
           </div>
         </div>
       </Carousel.Item>
@@ -42,9 +43,9 @@ const OurCarousel = () => {
             <span className="new-arrival" id="new-arrival-2">
               NEW ARRIVALS
             </span>
-            <a className="caption-btn" id="caption-btn-2" href="/">
+            <Link className="caption-btn" id="caption-btn-2" to="/Cart">
               SHOP NOW
-            </a>
+            </Link>
           </div>
         </div>
       </Carousel.Item>
@@ -65,9 +66,9 @@ const OurCarousel = () => {
             <span className="new-arrival" id="new-arrival-3">
               NEW ARRIVALS
             </span>
-            <a className="caption-btn" id="caption-btn-3" href="/">
+            <Link className="caption-btn" id="caption-btn-3" to="/Cart">
               SHOP NOW
-            </a>
+            </Link>
           </div>
         </div>
       </Carousel.Item>

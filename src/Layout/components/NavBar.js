@@ -12,7 +12,6 @@ const NavBar = () => {
   const [currency, setCurrency] = useState("USA");
   const [visible, setVisible] = useState("d-none");
   const [cartVisibility, setCartVisibility] = useState("d-none");
-  const [hover, setHover] = useState("");
   //
   const onDropDownClick = (e) => {
     e.preventDefault();

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./style/shipping.scss";
 
 const Shipping = () => {
@@ -7,7 +8,7 @@ const Shipping = () => {
       <div className="shipping-row">
         <div className="shipping-offers">
           <h4>Free Delivery Worldwide</h4>
-          <a href="/">Click here for more info</a>
+          <Link to="/Cart">Click here for more info</Link>
         </div>
         <div className="shipping-offers divider">
           <h4>30 Days Return</h4>

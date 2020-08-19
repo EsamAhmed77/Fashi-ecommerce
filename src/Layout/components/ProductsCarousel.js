@@ -1,14 +1,12 @@
 import React from "react";
-//
+import { Link } from "react-router-dom";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import Container from "react-bootstrap/Container";
 //
 import "./style/Main.scss";
 import "./style/productsCarousel.scss";
-//
 import FavoriteProduct from "./blocks/favoriteModal";
-//
 import { items } from "../../api/api";
 class ProductsCarousel extends React.Component {
   state = {
@@ -24,12 +22,12 @@ class ProductsCarousel extends React.Component {
               <FavoriteProduct title={title} />
             </div>
             <img className="w-100" src={src} alt="" />
-            <a href="/" className="add-btn">
+            <Link to="/Cart" className="add-btn">
               add to cart
-            </a>
+            </Link>
           </div>
           <div className="item-description">
-            <a href="/">{title}</a>
+            <Link to="/Cart">{title}</Link>
             <div>
               {discount ? (
                 <>

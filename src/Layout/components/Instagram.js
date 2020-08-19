@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./style/instagram.scss";
 import { instagram } from "../../api/api";
 
@@ -12,7 +13,7 @@ const Instagram = () => {
         {instagram.map(({ id, src }) => (
           <div key={id} className="img">
             <img className="w-100" src={src} alt="gallery" />
-            <a href="/">
+            <Link to="/">
               <span className="likes">
                 <i className="far fa-heart"></i>
                 <span>39</span>
@@ -26,7 +27,7 @@ const Instagram = () => {
                 </p>
                 <span className="taken-by">Photo by @nancyward</span>
               </div>
-            </a>
+            </Link>
           </div>
         ))}
       </div>
