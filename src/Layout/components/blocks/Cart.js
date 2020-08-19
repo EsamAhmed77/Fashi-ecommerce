@@ -145,11 +145,11 @@ class Cart extends React.Component {
                   <input type="text" name="coupon" placeholder="Coupon Code" />
                 </div>
                 <div className="submit-coupon">
-                  <button className="cart-btns">apply coupon</button>
+                  <button className="cart-btn">apply coupon</button>
                 </div>
               </div>
               <div className="check-cart">
-                <button className="cart-btns">update cart</button>
+                <button className="cart-btn">update cart</button>
               </div>
             </div>
             <div className="cart-totals">
@@ -177,9 +177,7 @@ class Cart extends React.Component {
                     </select>
                     <input type="text" placeholder="State/Country" />
                     <input type="text" placeholder="Postcode/Zip" />
-                    <button className="cart-btns update-btn">
-                      update cart
-                    </button>
+                    <button className="cart-btn update-btn">update cart</button>
                   </div>
                 </div>
               </div>
@@ -189,7 +187,7 @@ class Cart extends React.Component {
                   <span>$39.00</span>
                 </div>
                 <div className="checkout-btn-container">
-                  <button className="cart-btns checkout-btn">
+                  <button className="cart-btn checkout-btn">
                     proceed to checkout
                   </button>
                 </div>
