@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./style/footer.scss";
 
 const Footer = () => {
@@ -16,29 +17,29 @@ const Footer = () => {
           <div className="social-media">
             <ul className="list-unstyled">
               <li>
-                <a href="/">
+                <Link to="/">
                   <i className="fab fa-facebook-f"></i>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/">
+                <Link to="/">
                   <i className="fab fa-instagram"></i>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/">
+                <Link to="/">
                   <i className="fab fa-pinterest-p"></i>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/">
+                <Link to="/">
                   <i className="fab fa-snapchat-ghost"></i>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/">
+                <Link to="/">
                   <i className="fab fa-youtube"></i>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -49,16 +50,16 @@ const Footer = () => {
           </div>
           <ul className="list-unstyled">
             <li>
-              <a href="/">men</a>
+              <Link to="/">men</Link>
             </li>
             <li>
-              <a href="/">women</a>
+              <Link to="/">women</Link>
             </li>
             <li>
-              <a href="/">dresses</a>
+              <Link to="/">dresses</Link>
             </li>
             <li>
-              <a href="/">sunglasses</a>
+              <Link to="/">sunglasses</Link>
             </li>
           </ul>
         </div>
@@ -68,16 +69,16 @@ const Footer = () => {
           </div>
           <ul className="list-unstyled">
             <li>
-              <a href="/">search</a>
+              <Link to="/">search</Link>
             </li>
             <li>
-              <a href="/">about us</a>
+              <Link to="/">about us</Link>
             </li>
             <li>
-              <a href="/">contact us</a>
+              <Link to="/">contact us</Link>
             </li>
             <li>
-              <a href="/">returns</a>
+              <Link to="/">returns</Link>
             </li>
           </ul>
         </div>
@@ -87,16 +88,16 @@ const Footer = () => {
           </div>
           <ul className="list-unstyled">
             <li>
-              <a href="/">track order</a>
+              <Link to="/">track order</Link>
             </li>
             <li>
-              <a href="/">returns</a>
+              <Link to="/">returns</Link>
             </li>
             <li>
-              <a href="/">shipping</a>
+              <Link to="/">shipping</Link>
             </li>
             <li>
-              <a href="/">FAQs</a>
+              <Link to="/">FAQs</Link>
             </li>
           </ul>
         </div>
@@ -117,21 +118,21 @@ const Footer = () => {
         </div>
       </div>
       <div className="copyrights text-center">
-        <a href="/">
+        <Link to="/">
           <img src="img/icon/paypal.png" alt="companies" />
-        </a>
-        <a href="/">
+        </Link>
+        <Link to="/">
           <img src="img/icon/visa.png" alt="companies" />
-        </a>
-        <a href="/">
+        </Link>
+        <Link to="/">
           <img src="img/icon/mastercard.png" alt="companies" />
-        </a>
-        <a href="/">
+        </Link>
+        <Link to="/">
           <img src="img/icon/express.png" alt="companies" />
-        </a>
-        <a href="/">
+        </Link>
+        <Link to="/">
           <img src="img/icon/discover.png" alt="companies" />
-        </a>
+        </Link>
         <div className="copy">
           Copyright © 2017 Colorlib. All rights reserved.
         </div>

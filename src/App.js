@@ -1,32 +1,14 @@
 import React from "react";
+import { BrowserRouter, Route } from "react-router-dom";
 //
-import Container from "react-bootstrap/Container";
-//
-import "./Layout/components/style/Main.scss";
-//
-import NavBar from "./Layout/components/NavBar";
-import OurCarousel from "./Layout/components/OurCarousel";
-import CatGrid from "./Layout/components/CatGrid";
-import ProductsCarousel from "./Layout/components/ProductsCarousel";
-import Timer from "./Layout/components/Timer";
-import Blogs from "./Layout/components/Blogs";
-import Instagram from "./Layout/components/Instagram";
-import Shipping from "./Layout/components/Shipping";
-import Footer from "./Layout/components/Footer";
-//
+import Home from "./Home";
+import Cart from "./Layout/components/blocks/Cart";
 const App = () => {
   return (
-    <Container className="p-0 m-0" fluid>
-      <NavBar />
-      <OurCarousel />
-      <CatGrid />
-      <ProductsCarousel />
-      <Timer />
-      <Blogs />
-      <Instagram />
-      <Shipping />
-      <Footer />
-    </Container>
+    <BrowserRouter>
+      <Route path="/" exact component={Home} />
+      <Route path="/Cart" exact component={Cart} />
+    </BrowserRouter>
   );
 };
 

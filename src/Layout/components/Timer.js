@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./style/timer.scss";
 import { Container, Row, Col } from "react-bootstrap";
 import Counter from "./blocks/Timer";
@@ -14,7 +15,7 @@ const Timer = () => {
               <div className="img-content">
                 <h3>The beauty</h3>
                 <h1>lookbook</h1>
-                <a href="/">view collection</a>
+                <Link to="/Cart">view collection</Link>
               </div>
             </div>
           </Col>
@@ -26,7 +27,7 @@ const Timer = () => {
                 alt="IMG-banner"
               />
               <div className="timer-content">
-                <a href="/">Gafas sol Hawkers one</a>
+                <Link to="/Cart">Gafas sol Hawkers one</Link>
                 <div className="prices">
                   <span className="old-price">$29.50</span>
                   <span className="new-price">$15.40</span>
