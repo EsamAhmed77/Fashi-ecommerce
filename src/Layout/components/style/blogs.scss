@@ -30,6 +30,7 @@
     .blog-info {
       padding-top: 14px;
       line-height: 1.8;
+      font-family: sans-serif;
       h4 {
         padding-bottom: 7;
         a {
@@ -46,13 +47,10 @@
       span {
         margin-right: 5px;
         font-size: 13px;
-        font-family: sans-serif;
-        line-height: 1.8;
       }
       .by-on {
         text-transform: capitalize;
         color: #999999;
-        font-family: sans-serif;
       }
       .date-data {
         color: #555555;
@@ -60,7 +58,6 @@
       .blog-description {
         font-size: 15px;
         color: #888888;
-        line-height: 1.8;
         padding-top: 14px;
       }
     }

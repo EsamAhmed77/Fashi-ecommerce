@@ -275,6 +275,15 @@
 .top-nav-collapse {
   display: none;
 }
+.dropdown.nav-item:hover .dropdown-menu {
+  visibility: visible;
+  transition-delay: 0s;
+}
+.dropdown-menu {
+  display: block !important;
+  visibility: hidden;
+  transition-delay: 0.7s;
+}
 @media (max-width: 991px) {
   .top-nav-collapse {
     margin-top: 23px;
