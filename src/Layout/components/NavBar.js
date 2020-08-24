@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 //
 import "./style/Main.scss";
 import "./style/nav-bar.scss";
@@ -115,18 +116,18 @@ const NavBar = () => {
                 <NavDropdown.Item href="/">HomePage V1</NavDropdown.Item>
                 <NavDropdown.Item href="/">HomePage V1</NavDropdown.Item>
               </NavDropdown>
-              <a className="nav-link" href="/">
+              <Link className="nav-link" to="/Shop">
                 Shop
-              </a>
-              <a className="nav-link sale" href="/">
+              </Link>
+              <Link className="nav-link sale" to="/Shop">
                 Sale
-              </a>
+              </Link>
               <a className="nav-link" href="/">
                 Feature
               </a>
-              <a className="nav-link" href="/">
+              <Link className="nav-link" to="/Blogs">
                 Blog
-              </a>
+              </Link>
               <a className="nav-link" href="/">
                 About
               </a>

@@ -1,5 +1,4 @@
 import React from "react";
-import "../style/Main.scss";
 import "./style/Cart.scss";
 import Container from "react-bootstrap/Container";
 import NavBar from "../NavBar";

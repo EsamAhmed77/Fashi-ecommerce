@@ -6,7 +6,7 @@ import Container from "react-bootstrap/Container";
 //
 import "./style/Main.scss";
 import "./style/productsCarousel.scss";
-import FavoriteProduct from "./blocks/favoriteModal";
+import FavoriteProduct from "./blocks/FavoriteProduct";
 import { items } from "../../api/api";
 class ProductsCarousel extends React.Component {
   state = {

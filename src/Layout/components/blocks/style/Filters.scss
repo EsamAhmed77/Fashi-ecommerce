@@ -1,0 +1,130 @@
+.filters {
+  border-top: 1px solid #e1e1e1;
+  padding: 22px 0 50px;
+  .filters-text {
+    font-size: 18px;
+    color: #555555;
+    line-height: 1.5;
+    padding: 0 0 17px;
+  }
+  //price filter
+  .price-filter-container {
+    padding: 0 10px 0 5px;
+  }
+  .filter-price {
+    padding: 15px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @media (min-width: 802px) {
+    }
+    .filter {
+      button {
+        padding: 5px 16px;
+        outline: none !important;
+        border: none;
+        background-color: #222;
+        color: #fff;
+        text-transform: uppercase;
+        border-radius: 25px;
+        letter-spacing: 1px;
+        transition: all 0.3s;
+        &:hover {
+          background-color: #e65540;
+        }
+      }
+    }
+    .range {
+      padding: 10px 0;
+      font-size: 16px;
+      color: #555555;
+      line-height: 1.5;
+    }
+  }
+  //color filter
+  .color-filter-container {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        margin-right: 10px;
+        .color-filter1 {
+          background-color: #00bbec;
+        }
+        .color-filter2 {
+          background-color: #2c6ed5;
+        }
+        .color-filter3 {
+          background-color: #ffa037;
+        }
+        .color-filter4 {
+          background-color: #ff5337;
+        }
+        .color-filter5 {
+          background-color: #a88c77;
+        }
+        .color-filter6 {
+          background-color: #393939;
+        }
+        .color-filter7 {
+          background-color: #cccccc;
+        }
+
+        .checkbox-color-filter {
+          display: none;
+        }
+
+        .color-filter {
+          display: block;
+          width: 25px;
+          height: 25px;
+          cursor: pointer;
+          border-radius: 50%;
+        }
+
+        .checkbox-color-filter:checked + .color-filter {
+          box-shadow: 0 0 0px 2px black;
+          -moz-box-shadow: 0 0 0px 2px black;
+          -webkit-box-shadow: 0 0 0px 2px black;
+          -o-box-shadow: 0 0 0px 2px black;
+          -ms-box-shadow: 0 0 0px 2px black;
+        }
+      }
+    }
+  }
+}
+
+//price slider
+.noUi-target {
+  border: none;
+  background-color: #e1e1e1;
+  height: 4px;
+}
+
+.noUi-base {
+  transform: translate3d(0, 0, 0);
+}
+.noUi-connect {
+  background-color: #c5c5c5;
+  border: none;
+  box-shadow: none;
+  right: 0%;
+  left: 0%;
+}
+.noUi-horizontal .noUi-handle {
+  width: 13px;
+  height: 13px;
+  right: -7px;
+  top: -5px;
+  border: none;
+  border-radius: 50%;
+  background: #999999;
+  cursor: pointer;
+  box-shadow: none;
+  outline: none;
+  &::before,
+  &::after {
+    content: none;
+  }
+}
