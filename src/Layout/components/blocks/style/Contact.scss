@@ -1,0 +1,97 @@
+.contact {
+  font-family: sans-serif;
+  .contact-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 240px;
+    margin-bottom: 60px;
+    @media (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+    .contact-header {
+      text-align: center;
+      h1 {
+        font-size: 50px;
+        font-weight: bold;
+        color: #fff;
+        margin: 0;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .user-form {
+    padding: 0 10px;
+    width: 100%;
+    @media (max-width: 767px) {
+      padding: 0;
+    }
+    .uf-header {
+      font-size: 26px;
+      line-height: 1.8;
+      color: rgba(124, 124, 124, 0.918);
+    }
+    .user-info {
+      input {
+        border: 1px solid #d6d6d6;
+        height: 50px;
+        width: 100%;
+        margin: 20px 0;
+        display: flex;
+        align-items: center;
+        outline: none !important;
+        padding: 0 20px;
+        font-size: 13px;
+        border-radius: 5px;
+        &::placeholder {
+          color: #808080;
+        }
+        &:focus::placeholder {
+          color: #fff;
+        }
+      }
+    }
+    textarea {
+      width: 100%;
+      border: 1px solid #d6d6d6;
+      padding: 20px;
+      font-size: 13px;
+      outline: none !important;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      &::placeholder {
+        color: #808080;
+      }
+      &:focus::placeholder {
+        color: #fff;
+      }
+    }
+    .send-btn {
+      button {
+        outline: none !important;
+        border: none;
+        background-color: #222;
+        color: #fff;
+        font-size: 15px;
+        text-transform: uppercase;
+        border-radius: 25px;
+        letter-spacing: 1px;
+        transition: all 0.3s;
+        width: 150px;
+        height: 50px;
+        &:hover {
+          background-color: #e65540;
+        }
+      }
+    }
+  }
+}
+.container {
+  max-width: 1200px;
+}
+.p-b-30 {
+  padding-bottom: 30px;
+}
+.min-height-530 {
+  min-height: 530px;
+}

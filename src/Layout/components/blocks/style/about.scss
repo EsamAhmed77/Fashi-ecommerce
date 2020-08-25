@@ -1,5 +1,5 @@
-.blog {
-  .blog-banner {
+.About {
+  .About-banner {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,10 +8,10 @@
     @media (max-width: 767px) {
       margin-bottom: 30px;
     }
-    .blog-header {
+    .About-header {
       text-align: center;
       h1 {
-        font-size: 50px;
+        font-size: 46px;
         font-weight: bold;
         color: #fff;
         margin: 0;
@@ -20,8 +20,12 @@
     }
   }
   .our-story-section {
+    padding-bottom: 30px;
+    @media (max-width: 767px) {
+      padding-bottom: 0px;
+    }
     .section-img {
-      padding-bottom: 30px;
+      margin-bottom: 30px;
       overflow: hidden;
       &:hover {
         img {
@@ -34,16 +38,32 @@
     }
   }
   .ourStory {
+    padding-bottom: 30px;
+    p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #777777e7;
+      margin: 0px;
+      padding-bottom: 28px;
+    }
     .header {
       h2 {
+        font-size: 28px;
+        color: #302f2fe8;
+        line-height: 1.2;
       }
-    }
-    p {
     }
     .steve-words {
+      margin-left: 9px;
+      padding-left: 29px;
+      border-left: 3px solid #e6e6e6;
       p {
+        padding-bottom: 10px;
       }
       span {
+        font-size: 15px;
+        color: #555555;
+        line-height: 1.8;
       }
     }
   }

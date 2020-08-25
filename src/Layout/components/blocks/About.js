@@ -1,16 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 //
 import NavBar from "../NavBar";
 import Footer from "../Footer";
-import "./style/blogs.scss";
-const Blogs = () => {
+import "./style/about.scss";
+const About = () => {
   return (
-    <div className="blog">
+    <div className="About">
       <NavBar />
       <div
-        className="blog-banner"
+        className="About-banner"
         style={{
           backgroundImage: `url(${"img/heading-pages-06.jpg"})`,
           backgroundPosition: "center center",
@@ -18,8 +17,8 @@ const Blogs = () => {
           backgroundSize: "cover",
         }}
       >
-        <div className="blog-header">
-          <h1>Blog</h1>
+        <div className="About-header">
+          <h1>About</h1>
         </div>
       </div>
       <div className="our-story-section">
@@ -75,4 +74,4 @@ const Blogs = () => {
   );
 };
 
-export default Blogs;
+export default About;

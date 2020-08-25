@@ -122,18 +122,18 @@ const NavBar = () => {
               <Link className="nav-link sale" to="/Shop">
                 Sale
               </Link>
-              <a className="nav-link" href="/">
+              <Link className="nav-link" to="/Cart">
                 Feature
-              </a>
-              <Link className="nav-link" to="/Blogs">
+              </Link>
+              <Link className="nav-link" to="/Blog">
                 Blog
               </Link>
-              <a className="nav-link" href="/">
+              <Link className="nav-link" to="/About">
                 About
-              </a>
-              <a className="nav-link" href="/">
-                Content
-              </a>
+              </Link>
+              <Link className="nav-link" to="/Contact">
+                Contact
+              </Link>
             </Nav>
           </Navbar.Collapse>
           <div className="bnb-left-area">

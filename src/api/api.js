@@ -205,3 +205,51 @@ export const shopItems = [
     price: "$92.50",
   },
 ];
+
+export const ourBlogs = [
+  {
+    id: 1,
+    img: "/img/blog-04.jpg",
+    title: "Black Friday Guide: Best Sales & Discount Codes",
+    date: "18 DEC, 2020",
+    blogType: "Fashion, Life style",
+    story:
+      "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius",
+  },
+  {
+    id: 2,
+    img: "/img/blog-05.jpg",
+    title: "Black Friday Guide: Best Sales & Discount Codes",
+    date: "21 DEC, 2020",
+    blogType: "Cooking, Food",
+    story:
+      "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius",
+  },
+  {
+    id: 3,
+    img: "/img/blog-08.jpg",
+    title: "The White Sneakers Nearly Every Fashion Girls Own",
+    date: "24 DEC, 2020",
+    blogType: "Fashion, Life style",
+    story:
+      "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius",
+  },
+  {
+    id: 4,
+    img: "/img/blog-02.jpg",
+    title: "Black Friday Guide: Best Sales & Discount Codes",
+    date: "26 DEC, 2020",
+    blogType: "Fashion, Life style",
+    story:
+      "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius",
+  },
+  {
+    id: 5,
+    img: "/img/blog-03.jpg",
+    title: "The White Sneakers Nearly Every Fashion Girls Own",
+    date: "29 DEC, 2020",
+    blogType: "Cooking, Food",
+    story:
+      "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius",
+  },
+];
