@@ -253,3 +253,57 @@ export const ourBlogs = [
       "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius",
   },
 ];
+
+export const cartProducts = [
+  {
+    id: 1,
+    img: "img/item-cart-01.jpg",
+    productTitle: "White Shirt With Pleat Detail Back",
+    productPrice: "$19.00",
+  },
+  {
+    id: 2,
+    img: "img/item-cart-02.jpg",
+    productTitle: "Converse All Star Hi Black Canvas",
+    productPrice: "$39.00",
+  },
+  {
+    id: 3,
+    img: "img/item-cart-03.jpg",
+    productTitle: "Nixon Porter Leather Watch In Tan",
+    productPrice: "$17.00",
+  },
+];
+
+export const blogsProducts = [
+  {
+    id: 1,
+    img: "img/item-17.jpg",
+    title: "White Shirt With Pleat Detail Back",
+    price: "$39.00",
+  },
+  {
+    id: 2,
+    img: "img/item-16.jpg",
+    title: "Converse All Star Hi Black Canvas",
+    price: "$9.00",
+  },
+  {
+    id: 3,
+    img: "img/item-08.jpg",
+    title: "Nixon Porter Leather Watch In Tan",
+    price: "$77.00",
+  },
+  {
+    id: 4,
+    img: "img/item-05.jpg",
+    title: "Converse All Star Hi Black Canvas",
+    price: "$29.00",
+  },
+  {
+    id: 5,
+    img: "img/item-03.jpg",
+    title: "Denim jacket blue",
+    price: "$57.00",
+  },
+];
