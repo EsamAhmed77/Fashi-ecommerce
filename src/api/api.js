@@ -31,38 +31,38 @@ export const items = [
 export const category = [
   {
     id: 1,
-    img: "img/banner-02.jpg",
+    img: "/img/banner-02.jpg",
     box: "box1",
     productType: "dresses",
   },
   {
     id: 2,
-    img: "img/banner-05.jpg",
+    img: "/img/banner-05.jpg",
     box: "box4",
     productType: "glasses",
   },
   {
     id: 3,
-    img: "img/banner-03.jpg",
+    img: "/img/banner-03.jpg",
     box: "box2",
     productType: "watches",
   },
   {
     id: 4,
-    img: "img/banner-07.jpg",
+    img: "/img/banner-07.jpg",
     box: "box5",
     productType: "footerwear",
   },
   {
     id: 5,
-    img: "img/banner-04.jpg",
+    img: "/img/banner-04.jpg",
     box: "box3",
     productType: "Bags",
   },
   {
     id: 6,
     mainClass: "category-offer",
-    img: "img/icon/bg-01.jpg",
+    img: "/img/icon/bg-01.jpg",
     box: "box6",
     offer: "offer",
     header: "SIGN UP & GET 20% OFF",
@@ -75,7 +75,7 @@ export const category = [
 export const blogs = [
   {
     id: 1,
-    img: "img/blog-01.jpg",
+    img: "/img/blog-01.jpg",
     title: "Black Friday Guide: Best Sales & Discount Codes",
     blogger: "Nancy Ward",
     date: "July 22, 2020",
@@ -84,7 +84,7 @@ export const blogs = [
   },
   {
     id: 2,
-    img: "img/blog-02.jpg",
+    img: "/img/blog-02.jpg",
     title: "The White Sneakers Nearly Every Fashion Girls Own",
     blogger: "Nancy Ward",
     date: "July 22, 2020",
@@ -93,7 +93,7 @@ export const blogs = [
   },
   {
     id: 3,
-    img: "img/blog-03.jpg",
+    img: "/img/blog-03.jpg",
     title: "New York SS 2018 Street Style: Annina Mislin",
     blogger: "Nancy Ward",
     date: "July 1, 2020",
@@ -104,23 +104,23 @@ export const blogs = [
 export const instagram = [
   {
     id: 1,
-    src: "img/gallery-03.jpg",
+    src: "/img/gallery-03.jpg",
   },
   {
     id: 2,
-    src: "img/gallery-07.jpg",
+    src: "/img/gallery-07.jpg",
   },
   {
     id: 3,
-    src: "img/gallery-09.jpg",
+    src: "/img/gallery-09.jpg",
   },
   {
     id: 4,
-    src: "img/gallery-13.jpg",
+    src: "/img/gallery-13.jpg",
   },
   {
     id: 5,
-    src: "img/gallery-15.jpg",
+    src: "/img/gallery-15.jpg",
   },
 ];
 export const shopItems = [
@@ -215,6 +215,9 @@ export const ourBlogs = [
     blogType: "Fashion, Life style",
     story:
       "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius",
+
+    firstTag: "LifeStyle",
+    secTag: "Fashion",
   },
   {
     id: 2,
@@ -224,6 +227,10 @@ export const ourBlogs = [
     blogType: "Cooking, Food",
     story:
       "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius",
+    firstTag: "StreetStyle",
+    secTag: "Denim",
+    thirdTag: "Craft",
+
   },
   {
     id: 3,
@@ -233,6 +240,9 @@ export const ourBlogs = [
     blogType: "Fashion, Life style",
     story:
       "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius",
+    firstTag: "Denim",
+    secTag: "Craft",
+    thirdTag: "StreetStyle"
   },
   {
     id: 4,
@@ -242,6 +252,10 @@ export const ourBlogs = [
     blogType: "Fashion, Life style",
     story:
       "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius",
+    firstTag: "Fashion",
+    secTag: "Craft",
+    thirdTag: "StreetStyle",
+    forthTag: "Denim",
   },
   {
     id: 5,
@@ -251,25 +265,30 @@ export const ourBlogs = [
     blogType: "Cooking, Food",
     story:
       "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius",
+    firstTag: "Fashion",
+    secTag: "LifeStyle",
+    thirdTag: "StreetStyle",
+    forthTag: "Denim",
+    fifthTag: "Craft"
   },
 ];
 
 export const cartProducts = [
   {
     id: 1,
-    img: "img/item-cart-01.jpg",
+    img: "/img/item-cart-01.jpg",
     productTitle: "White Shirt With Pleat Detail Back",
     productPrice: "$19.00",
   },
   {
     id: 2,
-    img: "img/item-cart-02.jpg",
+    img: "/img/item-cart-02.jpg",
     productTitle: "Converse All Star Hi Black Canvas",
     productPrice: "$39.00",
   },
   {
     id: 3,
-    img: "img/item-cart-03.jpg",
+    img: "/img/item-cart-03.jpg",
     productTitle: "Nixon Porter Leather Watch In Tan",
     productPrice: "$17.00",
   },
@@ -278,31 +297,31 @@ export const cartProducts = [
 export const blogsProducts = [
   {
     id: 1,
-    img: "img/item-17.jpg",
+    img: "/img/item-17.jpg",
     title: "White Shirt With Pleat Detail Back",
     price: "$39.00",
   },
   {
     id: 2,
-    img: "img/item-16.jpg",
+    img: "/img/item-16.jpg",
     title: "Converse All Star Hi Black Canvas",
     price: "$9.00",
   },
   {
     id: 3,
-    img: "img/item-08.jpg",
+    img: "/img/item-08.jpg",
     title: "Nixon Porter Leather Watch In Tan",
     price: "$77.00",
   },
   {
     id: 4,
-    img: "img/item-05.jpg",
+    img: "/img/item-05.jpg",
     title: "Converse All Star Hi Black Canvas",
     price: "$29.00",
   },
   {
     id: 5,
-    img: "img/item-03.jpg",
+    img: "/img/item-03.jpg",
     title: "Denim jacket blue",
     price: "$57.00",
   },

@@ -1,13 +1,11 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 //
-import NavBar from "../NavBar";
 import Footer from "../Footer";
 import "./style/about.scss";
 const About = () => {
   return (
     <div className="About">
-      <NavBar />
       <div
         className="About-banner"
         style={{

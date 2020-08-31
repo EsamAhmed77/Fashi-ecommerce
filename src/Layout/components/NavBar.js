@@ -64,7 +64,7 @@ const NavBar = () => {
       <div className="bot-nav-bar">
         <Navbar expand="lg">
           <Navbar.Brand href="/">
-            <img src="img/icon/logo.png" alt="logo" />
+            <img src="/img/icon/logo.png" alt="logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse
@@ -116,22 +116,22 @@ const NavBar = () => {
                 <NavDropdown.Item href="/">HomePage V1</NavDropdown.Item>
                 <NavDropdown.Item href="/">HomePage V1</NavDropdown.Item>
               </NavDropdown>
-              <Link className="nav-link" to="/Shop">
+              <Link className="nav-link" to="/shop">
                 Shop
               </Link>
-              <Link className="nav-link sale" to="/Shop">
+              <Link className="nav-link sale" to="/shop">
                 Sale
               </Link>
-              <Link className="nav-link" to="/Cart">
+              <Link className="nav-link" to="/cart">
                 Feature
               </Link>
-              <Link className="nav-link" to="/Blog">
+              <Link className="nav-link" to="/blog">
                 Blog
               </Link>
-              <Link className="nav-link" to="/About">
+              <Link className="nav-link" to="/about">
                 About
               </Link>
-              <Link className="nav-link" to="/Contact">
+              <Link className="nav-link" to="/contact">
                 Contact
               </Link>
             </Nav>
@@ -140,12 +140,12 @@ const NavBar = () => {
             <div className="icons">
               <div className="header-icon">
                 <a href="/">
-                  <img src="img/icon/icon-header-01.png" alt="header" />
+                  <img src="/img/icon/icon-header-01.png" alt="header" />
                 </a>
               </div>
               <div className="divider"></div>
               <div onClick={() => onCartClick()} className="cart-icon">
-                <img src="img/icon/icon-header-02.png" alt="cart" />
+                <img src="/img/icon/icon-header-02.png" alt="cart" />
                 <div className="cart-orders"></div>
               </div>
             </div>

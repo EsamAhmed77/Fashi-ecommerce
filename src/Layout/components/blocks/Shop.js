@@ -5,7 +5,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import "./style/shop.scss";
 import "../style/productsCarousel.scss";
 //
-import NavBar from "../NavBar";
 import Footer from "../Footer";
 import { PriceFilter, ColorFilter } from "./Filters";
 import { shopItems } from "../../../api/api";
@@ -13,7 +12,6 @@ import FavoriteProduct from "./FavoriteProduct";
 const Shop = () => {
   return (
     <Container className="p-0 m-0" fluid>
-      <NavBar />
       <div className="women-shop">
         <div
           className="ws-banner"
@@ -38,27 +36,27 @@ const Shop = () => {
                     <h3>categories</h3>
                     <ul className="list-unstyled">
                       <li>
-                        <Link className="cat-links main" to="/Shop">
+                        <Link className="cat-links main" to="/shop">
                           All
                         </Link>
                       </li>
                       <li>
-                        <Link className="cat-links" to="/Shop">
+                        <Link className="cat-links" to="/shop">
                           Women
                         </Link>
                       </li>
                       <li>
-                        <Link className="cat-links" to="/Shop">
+                        <Link className="cat-links" to="/shop">
                           Men
                         </Link>
                       </li>
                       <li>
-                        <Link className="cat-links" to="/Shop">
+                        <Link className="cat-links" to="/shop">
                           Kids
                         </Link>
                       </li>
                       <li>
-                        <Link className="cat-links" to="/Shop">
+                        <Link className="cat-links" to="/shop">
                           Accessories
                         </Link>
                       </li>
@@ -127,12 +125,12 @@ const Shop = () => {
                             <FavoriteProduct title={title} />
                           </div>
                           <img className="w-100" src={src} alt="" />
-                          <Link to="/Cart" className="add-btn">
+                          <Link to="/cart" className="add-btn">
                             add to cart
                           </Link>
                         </div>
                         <div className="item-description">
-                          <Link to="/Cart">{title}</Link>
+                          <Link to="/cart">{title}</Link>
                           <div>
                             {discount ? (
                               <>
@@ -150,8 +148,8 @@ const Shop = () => {
                 )}
               </Row>
               <div className="pages">
-                <Link to="/Shop">1</Link>
-                <Link to="/Shop">2</Link>
+                <Link to="/shop">1</Link>
+                <Link to="/shop">2</Link>
               </div>
             </Col>
           </Row>

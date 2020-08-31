@@ -362,6 +362,8 @@
           padding-left: 15px !important;
           color: #fff !important;
           line-height: 2.56;
+          width: fit-content;
+          margin: 0 15px;
           &::after {
             content: none;
           }
@@ -411,8 +413,8 @@
 @media (min-width: 1200px) {
   .navbar {
     .navbar-nav {
-      flex-basis: 70%;
-      justify-content: space-evenly;
+      flex-basis: 30%;
+      justify-content: space-between;
     }
   }
 }

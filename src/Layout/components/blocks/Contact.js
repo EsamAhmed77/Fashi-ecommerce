@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import GoogleMapReact from "google-map-react";
 //
-import NavBar from "../NavBar";
 import Footer from "../Footer";
 import "./style/Contact.scss";
 import { Container, Row, Col } from "react-bootstrap";
@@ -28,7 +27,6 @@ class Contact extends Component {
   render() {
     return (
       <div className="contact">
-        <NavBar />
         <div
           className="contact-banner"
           style={{

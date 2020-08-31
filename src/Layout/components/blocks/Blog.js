@@ -1,15 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import NavBar from "../NavBar";
+
 import Footer from "../Footer";
 import "./style/blogBlock.scss";
 import { Container, Row, Col } from "react-bootstrap";
 import { ourBlogs, blogsProducts } from "../../../api/api";
 
-const Blog = () => {
+const Blog = (props) => {
   return (
     <div>
-      <NavBar />
       <div className="blog-section">
         <div
           className="blog-banner"
@@ -30,13 +29,15 @@ const Blog = () => {
               <div className="blogs-container">
                 {ourBlogs.map(({ id, img, title, date, story, blogType }) => (
                   <div key={id} className="the-blog">
-                    <a href="/" className="img-wrapper">
+                    <Link to={`/blog-details/${id}`} className="img-wrapper">
                       <img className="w-100" src={img} alt="blog" />
                       <span className="date">{date}</span>
-                    </a>
-                    <div className="blog-information">
+                    </Link>
+                    <div
+                      className="blog-information"
+                    >
                       <h4>
-                        <a href="/">{title}</a>
+                        <Link to={`/blog-details/${id}`}>{title}</Link>
                       </h4>
                       <div className="info">
                         <span>By Admin</span>
@@ -44,7 +45,10 @@ const Blog = () => {
                         <span>8 Comments</span>
                       </div>
                       <p className="blog-story">{story}</p>
-                      <Link className="continue-reading" to="/Blog">
+                      <Link
+                        className="continue-reading"
+                        to={`/blog-details/${id}`}
+                      >
                         continue reading
                         <i className="fas fa-long-arrow-alt-right"></i>
                       </Link>
@@ -53,8 +57,8 @@ const Blog = () => {
                 ))}
               </div>
               <div className="pages">
-                <Link to="/Shop">1</Link>
-                <Link to="/Shop">2</Link>
+                <Link to="/shop">1</Link>
+                <Link to="/shop">2</Link>
               </div>
             </Col>
             <Col md={4} lg={3}>
@@ -67,19 +71,19 @@ const Blog = () => {
                   <h3>Categories</h3>
                   <ul className="list-unstyled">
                     <li className="border-tb">
-                      <Link to="/Blog">Fashion</Link>
+                      <Link to="/blog">Fashion</Link>
                     </li>
                     <li>
-                      <Link to="/Blog">Beauty</Link>
+                      <Link to="/blog">Beauty</Link>
                     </li>
                     <li className="border-tb">
-                      <Link to="/Blog">Street Style</Link>
+                      <Link to="/blog">Street Style</Link>
                     </li>
                     <li>
-                      <Link to="/Blog">Life Style</Link>
+                      <Link to="/blog">Life Style</Link>
                     </li>
                     <li className="border-tb">
-                      <Link to="/Blog">DIY & Crafts</Link>
+                      <Link to="/blog">DIY & Crafts</Link>
                     </li>
                   </ul>
                 </div>
@@ -99,46 +103,46 @@ const Blog = () => {
                 <ul className="list-unstyled archive">
                   <h3>Archive</h3>
                   <li>
-                    <Link to="/Blog">July 2018</Link>
+                    <Link to="/blog">July 2018</Link>
                     <span>(9)</span>
                   </li>
                   <li>
-                    <Link to="/Blog">June 2018</Link>
+                    <Link to="/blog">June 2018</Link>
                     <span>(39)</span>
                   </li>
                   <li>
-                    <Link to="/Blog">May 2018</Link>
+                    <Link to="/blog">May 2018</Link>
                     <span>(49)</span>
                   </li>
                   <li>
-                    <Link to="/Blog">April 2018</Link>
+                    <Link to="/blog">April 2018</Link>
                     <span>(49)</span>
                   </li>
                   <li>
-                    <Link to="/Blog">March 2018</Link>
+                    <Link to="/blog">March 2018</Link>
                     <span>(29)</span>
                   </li>
                   <li>
-                    <Link to="/Blog">February 2018</Link>
+                    <Link to="/blog">February 2018</Link>
                     <span>(19)</span>
                   </li>
                   <li>
-                    <Link to="/Blog">January 2018</Link>
+                    <Link to="/blog">January 2018</Link>
                     <span>(59)</span>
                   </li>
                   <li>
-                    <Link to="/Blog">December 2017</Link>
+                    <Link to="/blog">December 2017</Link>
                     <span>(69)</span>
                   </li>
                 </ul>
                 <div className="tags">
                   <h3>Tags</h3>
                   <div className="all-tags">
-                    <Link to="/Blog">Fashion</Link>
-                    <Link to="/Blog">LifeStyle</Link>
-                    <Link to="/Blog">Denim</Link>
-                    <Link to="/Blog">StreetStyle</Link>
-                    <Link to="/Blog">Crafted</Link>
+                    <Link to="/blog">Fashion</Link>
+                    <Link to="/blog">LifeStyle</Link>
+                    <Link to="/blog">Denim</Link>
+                    <Link to="/blog">StreetStyle</Link>
+                    <Link to="/blog">Crafted</Link>
                   </div>
                 </div>
               </div>

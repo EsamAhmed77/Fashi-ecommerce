@@ -119,19 +119,19 @@ const Footer = () => {
       </div>
       <div className="copyrights text-center">
         <Link to="/">
-          <img src="img/icon/paypal.png" alt="companies" />
+          <img src="/img/icon/paypal.png" alt="companies" />
         </Link>
         <Link to="/">
-          <img src="img/icon/visa.png" alt="companies" />
+          <img src="/img/icon/visa.png" alt="companies" />
         </Link>
         <Link to="/">
-          <img src="img/icon/mastercard.png" alt="companies" />
+          <img src="/img/icon/mastercard.png" alt="companies" />
         </Link>
         <Link to="/">
-          <img src="img/icon/express.png" alt="companies" />
+          <img src="/img/icon/express.png" alt="companies" />
         </Link>
         <Link to="/">
-          <img src="img/icon/discover.png" alt="companies" />
+          <img src="/img/icon/discover.png" alt="companies" />
         </Link>
         <div className="copy">
           Copyright © 2017 Colorlib. All rights reserved.

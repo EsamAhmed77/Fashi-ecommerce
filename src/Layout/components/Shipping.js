@@ -8,7 +8,7 @@ const Shipping = () => {
       <div className="shipping-row">
         <div className="shipping-offers">
           <h4>Free Delivery Worldwide</h4>
-          <Link to="/Cart">Click here for more info</Link>
+          <Link to="/cart">Click here for more info</Link>
         </div>
         <div className="shipping-offers divider">
           <h4>30 Days Return</h4>

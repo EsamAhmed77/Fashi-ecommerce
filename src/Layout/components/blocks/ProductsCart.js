@@ -22,7 +22,7 @@ const ProductsCart = (props) => {
         </div>
         <div className="total-price text-right">Total: $75.00</div>
         <div className="cart-btns">
-          <Link className="link" to="/Cart">
+          <Link className="link" to="/cart">
             VIEW CART
           </Link>
           <Link className="link" to="/">
