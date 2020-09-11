@@ -6,7 +6,7 @@ import Container from "react-bootstrap/Container";
 //
 import "./style/Main.scss";
 import "./style/productsCarousel.scss";
-import FavoriteProduct from "./blocks/favoriteModal";
+import FavoriteProduct from "./blocks/FavoriteProduct";
 import { items } from "../../api/api";
 class ProductsCarousel extends React.Component {
   state = {
@@ -22,12 +22,12 @@ class ProductsCarousel extends React.Component {
               <FavoriteProduct title={title} />
             </div>
             <img className="w-100" src={src} alt="" />
-            <Link to="/Cart" className="add-btn">
+            <Link to="/cart" className="add-btn">
               add to cart
             </Link>
           </div>
           <div className="item-description">
-            <Link to="/Cart">{title}</Link>
+            <Link to="/cart">{title}</Link>
             <div>
               {discount ? (
                 <>

@@ -40,7 +40,7 @@ const CatGrid = () => {
                 </>
               ) : (
                 <>
-                  <Link to="/Cart">{productType}</Link>
+                  <Link to="/cart">{productType}</Link>
                 </>
               )}
             </div>

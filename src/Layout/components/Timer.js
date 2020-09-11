@@ -15,7 +15,7 @@ const Timer = () => {
               <div className="img-content">
                 <h3>The beauty</h3>
                 <h1>lookbook</h1>
-                <Link to="/Cart">view collection</Link>
+                <Link to="/cart">view collection</Link>
               </div>
             </div>
           </Col>
@@ -27,7 +27,7 @@ const Timer = () => {
                 alt="IMG-banner"
               />
               <div className="timer-content">
-                <Link to="/Cart">Gafas sol Hawkers one</Link>
+                <Link to="/cart">Gafas sol Hawkers one</Link>
                 <div className="prices">
                   <span className="old-price">$29.50</span>
                   <span className="new-price">$15.40</span>

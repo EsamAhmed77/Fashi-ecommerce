@@ -1,10 +1,10 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 //
 import "./style/Main.scss";
 import "./style/nav-bar.scss";
 //
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import Nav from "react-bootstrap/Nav";
 //
 import ProductsCart from "./blocks/ProductsCart";
@@ -63,7 +63,7 @@ const NavBar = () => {
       <div className="bot-nav-bar">
         <Navbar expand="lg">
           <Navbar.Brand href="/">
-            <img src="img/icon/logo.png" alt="logo" />
+            <img src="/img/icon/logo.png" alt="logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse
@@ -106,45 +106,46 @@ const NavBar = () => {
               </div>
             </div>
             <Nav>
-              <NavDropdown
-                renderMenuOnMount={true}
-                title="Home"
-                id="basic-nav-dropdown"
-              >
-                <NavDropdown.Item href="/">HomePage V1</NavDropdown.Item>
-                <NavDropdown.Item href="/">HomePage V1</NavDropdown.Item>
-                <NavDropdown.Item href="/">HomePage V1</NavDropdown.Item>
-              </NavDropdown>
-              <a className="nav-link" href="/">
+              <div className="dropdown nav-item">
+                <Link to="/" aria-haspopup="true" aria-expanded="false" id="basic-nav-dropdown" className="dropdown-toggle nav-link">
+                  Home
+                </Link>
+                <div className="dropdown-menu" aria-labelledby="basic-nav-dropdown" style={{ margin: "0"}}>
+                  <Link to="/" className="dropdown-item">HomePage V1</Link>
+                  <Link to="/" className="dropdown-item">HomePage V1</Link>
+                  <Link to="/" className="dropdown-item">HomePage V1</Link>
+                </div>
+              </div>
+              <Link className="nav-link" to="/shop">
                 Shop
-              </a>
-              <a className="nav-link sale" href="/">
+              </Link>
+              <Link className="nav-link sale" to="/shop">
                 Sale
-              </a>
-              <a className="nav-link" href="/">
+              </Link>
+              <Link className="nav-link" to="/cart">
                 Feature
-              </a>
-              <a className="nav-link" href="/">
+              </Link>
+              <Link className="nav-link" to="/blog">
                 Blog
-              </a>
-              <a className="nav-link" href="/">
+              </Link>
+              <Link className="nav-link" to="/about">
                 About
-              </a>
-              <a className="nav-link" href="/">
-                Content
-              </a>
+              </Link>
+              <Link className="nav-link" to="/contact">
+                Contact
+              </Link>
             </Nav>
           </Navbar.Collapse>
           <div className="bnb-left-area">
             <div className="icons">
               <div className="header-icon">
                 <a href="/">
-                  <img src="img/icon/icon-header-01.png" alt="header" />
+                  <img src="/img/icon/icon-header-01.png" alt="header" />
                 </a>
               </div>
               <div className="divider"></div>
               <div onClick={() => onCartClick()} className="cart-icon">
-                <img src="img/icon/icon-header-02.png" alt="cart" />
+                <img src="/img/icon/icon-header-02.png" alt="cart" />
                 <div className="cart-orders"></div>
               </div>
             </div>

@@ -1,8 +1,6 @@
 import React from "react";
-import "../style/Main.scss";
 import "./style/Cart.scss";
 import Container from "react-bootstrap/Container";
-import NavBar from "../NavBar";
 import Footer from "../Footer";
 
 class Cart extends React.Component {
@@ -13,7 +11,6 @@ class Cart extends React.Component {
   render() {
     return (
       <Container className="p-0 m-0" fluid>
-        <NavBar />
         <div className="cart">
           <div
             className="cart-banner"

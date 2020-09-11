@@ -22,7 +22,7 @@ const OurCarousel = () => {
             <span className="new-arrival" id="new-arrival-1">
               NEW ARRIVALS
             </span>
-            <Link className="caption-btn" id="caption-btn-1" to="/Cart">
+            <Link className="caption-btn" id="caption-btn-1" to="/cart">
               SHOP NOW
             </Link>
           </div>
@@ -43,7 +43,7 @@ const OurCarousel = () => {
             <span className="new-arrival" id="new-arrival-2">
               NEW ARRIVALS
             </span>
-            <Link className="caption-btn" id="caption-btn-2" to="/Cart">
+            <Link className="caption-btn" id="caption-btn-2" to="/cart">
               SHOP NOW
             </Link>
           </div>
@@ -66,7 +66,7 @@ const OurCarousel = () => {
             <span className="new-arrival" id="new-arrival-3">
               NEW ARRIVALS
             </span>
-            <Link className="caption-btn" id="caption-btn-3" to="/Cart">
+            <Link className="caption-btn" id="caption-btn-3" to="/cart">
               SHOP NOW
             </Link>
           </div>
