@@ -4,18 +4,28 @@ import Footer from "../Footer";
 import "./style/blogBlock.scss";
 import {Container, Row, Col} from "react-bootstrap";
 import {blogsProducts, ourBlogs} from "../../../api/api";
+import faker from "faker";
 
 export default class BlogDetails extends React.Component {
-  state = {name: "", email: "", website: "", comment: ""};
+  state = {
+    name: "",
+    email: "",
+    website: "",
+    commentValue: "",
+    comment: [{Name: null, Email: null, Website: null, CommentValue: null}]
+  };
 
-  handleChange(event) {
-    this.setState({
-      name: event.target.value,
-      email: event.target.value,
-      website: event.target.value,
-      comment: event.target.value
-    });
-  }
+  addVal = event => {
+    event.preventDefault();
+    let name = this.state.name;
+    let email = this.state.email;
+    let website = this.state.website;
+    let commentValue = this.state.commentValue;
+    let Comment = this.state.comment;
+    Comment.push({Name: name, Email: email, Website: website, CommentValue: commentValue});
+    this.setState({comment: Comment})
+    console.log(this.state.comment)
+  };
 
   render() {
     const {id} = this.props.match.params;
@@ -34,7 +44,7 @@ export default class BlogDetails extends React.Component {
               </li>
             </ol>
             <Container>
-              <Row>
+              <Row className="p-b-50">
                 <Col md={8} lg={9}>
                   <div className="blogs-container">
                     <div key={ourBlogs[id - 1].id} className="the-blog">
@@ -78,11 +88,11 @@ export default class BlogDetails extends React.Component {
                           <Link to={`/blog-details/${id}`}>{ourBlogs[id - 1].secTag}</Link>
                           {
                             (ourBlogs[id - 1].fifthTag) ?
-                                <Link to={`/blog-details/${id}`}>{ourBlogs[id - 1].tags.fifthTag}</Link> :
+                                <Link to={`/blog-details/${id}`}>{ourBlogs[id - 1].fifthTag}</Link> :
                                 (ourBlogs[id - 1].forthTag) ?
-                                    <Link to={`/blog-details/${id}`}>{ourBlogs[id - 1].tags.forthTag}</Link> :
+                                    <Link to={`/blog-details/${id}`}>{ourBlogs[id - 1].forthTag}</Link> :
                                     (ourBlogs[id - 1].thirdTag) ?
-                                        <Link to={`/blog-details/${id}`}>{ourBlogs[id - 1].tags.thirdTag}</Link> : ''
+                                        <Link to={`/blog-details/${id}`}>{ourBlogs[id - 1].thirdTag}</Link> : ''
                           }
                         </div>
                       </div>
@@ -90,15 +100,43 @@ export default class BlogDetails extends React.Component {
                         <h4>leave a comment</h4>
                         <h6>Your email address will not be published. Required fields are marked *</h6>
                         <div className="comment-form">
-                       <textarea
-                           name="comment"
-                           rows="5"
-                       />
-                          <input type="text" name="name" placeholder="Name*"/>
-                          <input type="text" name="email" placeholder="Email*"/>
-                          <input type="text" name="website" placeholder="Website*"/>
+                          {
+                            (this.state.comment.map(({i, Name, Email, Website, CommentValue}) => (
+                                <div key={i} className="ui container comment">
+                                  <div  className="comment">
+                                    <div className="avatar">
+                                      <img alt="avatar" src={faker.image.avatar()}/>
+                                    </div>
+                                    <div className="content">
+                                      <div className="author">
+                                        {Email}
+                                      </div>
+                                      <br/>
+                                      <div className="author">
+                                        {Name}
+                                      </div>
+                                      <br/>
+                                    </div>
+                                    <div className="text">{CommentValue}</div>
+                                  </div>
+                                </div>
+                            )))
+                          }
+                          <textarea
+                              name="comment"
+                              rows="5"
+                              placeholder="Comment..."
+                              value={this.state.commentValue}
+                              onChange={(e) => this.setState({commentValue: e.target.value})}
+                          />
+                          <input type="text" name="name" placeholder="Name*" value={this.state.name}
+                                 onChange={(e) => this.setState({name: e.target.value})}/>
+                          <input type="text" name="email" placeholder="Email*" value={this.state.email}
+                                 onChange={(e) => this.setState({email: e.target.value})}/>
+                          <input type="text" name="website" placeholder="Website*" value={this.state.website}
+                                 onChange={(e) => this.setState({website: e.target.value})}/>
                           <div className="post-comment-btn">
-                            <button>Post Comment</button>
+                            <button onClick={this.addVal}>Post Comment</button>
                           </div>
                         </div>
                       </div>

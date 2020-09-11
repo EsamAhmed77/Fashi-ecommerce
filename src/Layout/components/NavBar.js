@@ -5,7 +5,6 @@ import "./style/Main.scss";
 import "./style/nav-bar.scss";
 //
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import Nav from "react-bootstrap/Nav";
 //
 import ProductsCart from "./blocks/ProductsCart";
@@ -107,15 +106,16 @@ const NavBar = () => {
               </div>
             </div>
             <Nav>
-              <NavDropdown
-                renderMenuOnMount={true}
-                title="Home"
-                id="basic-nav-dropdown"
-              >
-                <NavDropdown.Item href="/">HomePage V1</NavDropdown.Item>
-                <NavDropdown.Item href="/">HomePage V1</NavDropdown.Item>
-                <NavDropdown.Item href="/">HomePage V1</NavDropdown.Item>
-              </NavDropdown>
+              <div className="dropdown nav-item">
+                <Link to="/" aria-haspopup="true" aria-expanded="false" id="basic-nav-dropdown" className="dropdown-toggle nav-link">
+                  Home
+                </Link>
+                <div className="dropdown-menu" aria-labelledby="basic-nav-dropdown" style={{ margin: "0"}}>
+                  <Link to="/" className="dropdown-item">HomePage V1</Link>
+                  <Link to="/" className="dropdown-item">HomePage V1</Link>
+                  <Link to="/" className="dropdown-item">HomePage V1</Link>
+                </div>
+              </div>
               <Link className="nav-link" to="/shop">
                 Shop
               </Link>

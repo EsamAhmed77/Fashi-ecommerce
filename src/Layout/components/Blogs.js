@@ -15,12 +15,12 @@ const Blogs = () => {
           {blogs.map(({ id, img, title, blogger, date, description }) => (
             <Col key={id} sm={10} md={4} className="m-auto">
               <div className="blog">
-                <Link to="/" className="blog-img">
+                <Link to="/blog" className="blog-img">
                   <img className="w-100" src={img} alt="blog" />
                 </Link>
                 <div className="blog-info">
                   <h4>
-                    <Link to="/">{title}</Link>
+                    <Link to="/blog">{title}</Link>
                   </h4>
                   <div>
                     <span className="by-on">by</span>
