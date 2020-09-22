@@ -1,12 +1,22 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Link } from "react-router-dom";
 
 import Footer from "../Footer";
 import "./style/blogBlock.scss";
 import { Container, Row, Col } from "react-bootstrap";
-import { ourBlogs, blogsProducts } from "../../../api/api";
+import {useDispatch, useSelector} from "react-redux";
+import {LoadAds, LoadBlogs} from "../../../redux/action";
 
 const Blog = (props) => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(LoadBlogs());
+    dispatch(LoadAds());
+  }, [dispatch])
+  const blogs = useSelector(state => state.blogs)
+  const ads = useSelector(state => state.ads)
+
   return (
     <div>
       <div className="blog-section">
@@ -25,9 +35,10 @@ const Blog = (props) => {
         </div>
         <Container>
           <Row>
+
             <Col md={8} lg={9}>
               <div className="blogs-container">
-                {ourBlogs.map(({ id, img, title, date, story, blogType }) => (
+                {blogs.map(({ id, img, title, date, story, blogType }) => (
                   <div key={id} className="the-blog">
                     <Link to={`/blog-details/${id}`} className="img-wrapper">
                       <img className="w-100" src={img} alt="blog" />
@@ -50,7 +61,7 @@ const Blog = (props) => {
                         to={`/blog-details/${id}`}
                       >
                         continue reading
-                        <i className="fas fa-long-arrow-alt-right"></i>
+                        <i className="fas fa-long-arrow-alt-right"> </i>
                       </Link>
                     </div>
                   </div>
@@ -65,7 +76,7 @@ const Blog = (props) => {
               <div className="d-flex flex-column">
                 <div className="search-input">
                   <input type="search" placeholder="Search" />
-                  <i className="fas fa-search"></i>
+                  <i className="fas fa-search"> </i>
                 </div>
                 <div className="all-categories">
                   <h3>Categories</h3>
@@ -88,7 +99,7 @@ const Blog = (props) => {
                   </ul>
                 </div>
                 <ul className="featured-products list-unstyled">
-                  {blogsProducts.map(({ id, img, price, title }) => (
+                  {ads.map(({ id, img, price, title }) => (
                     <li key={id} className="fp-product">
                       <div className="img-container">
                         <img src={img} alt="product" />

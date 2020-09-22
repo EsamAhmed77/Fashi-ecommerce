@@ -1,59 +1,60 @@
-//categories using flex way
-// import React from "react";
-// //Bootstrap
-// import Container from "react-bootstrap/Container";
-// import Row from "react-bootstrap/Row";
-// import Col from "react-bootstrap/Col";
-// //localStyle
-// import "./style/Main.scss";
-// import "./style/categories.scss";
+import React, {useEffect} from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+import "./style/cat-grid.scss";
+import Container from "react-bootstrap/Container";
+import { LoadCategories } from "../../redux/action"
 
-// const Categories = () => {
-//   return (
-//     <div className="categories">
-//       <Container>
-//         <Row>
-//           <Col sm={10} md={8} lg={4} className="mr-auto ml-auto">
-//             <div className="category">
-//               <img className="w-100" src="img/banner-02.jpg" alt="dresses" />
-//               <a href="/">dresses</a>
-//             </div>
-//             <div className="category">
-//               <img className="w-100" src="img/banner-05.jpg" alt="Glasses" />
-//               <a href="/">glasses</a>
-//             </div>
-//           </Col>
-//           <Col sm={10} md={8} lg={4} className="mr-auto ml-auto">
-//             <div className="category">
-//               <img className="w-100" src="img/banner-03.jpg" alt="dresses" />
-//               <a href="/">watches</a>
-//             </div>
-//             <div className="category">
-//               <img className="w-100" src="img/banner-07.jpg" alt="Glasses" />
-//               <a href="/">footerwear</a>
-//             </div>
-//           </Col>
-//           <Col sm={10} md={8} lg={4} className="mr-auto ml-auto">
-//             <div className="category">
-//               <img className="w-100" src="img/banner-04.jpg" alt="dresses" />
-//               <a href="/">Bags</a>
-//             </div>
-//             <div className="category-offer">
-//               <img className="w-100" src="img/icon/bg-01.jpg" alt="bg" />
-//               <div className="offer">
-//                 <h2>SIGN UP & GET 20% OFF</h2>
-//                 <p>
-//                   Be the frist to know about the latest fashion news and get
-//                   exclu-sive offers
-//                 </p>
-//                 <a href="/">sign up</a>
-//               </div>
-//             </div>
-//           </Col>
-//         </Row>
-//       </Container>
-//     </div>
-//   );
-// };
+const Categories = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(LoadCategories())
+  }, [dispatch])
+  const categories = useSelector(state => state.categories)
 
-// export default Categories;
+  return (
+    <div className="cat-grid mr-auto ml-auto">
+      <Container>
+        {Array.isArray(categories) && categories.length? categories.map(
+          ({
+            id,
+            img,
+            box,
+            productType,
+            offer,
+            header,
+            paragraph,
+            register,
+            mainClass,
+          }) => (
+            <div
+              key={id}
+              className={`${mainClass ? mainClass : "category"} ${box}`}
+            >
+              <img
+                className="w-100"
+                src={img}
+                alt={productType ? productType : "bg"}
+              />
+              {offer ? (
+                <>
+                  <div className={offer}>
+                    <h2>{header}</h2>
+                    <p>{paragraph}</p>
+                    <Link to="/">{register}</Link>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <Link to="/cart">{productType}</Link>
+                </>
+              )}
+            </div>
+          )
+        ) : <div>Loading...</div>}
+      </Container>
+    </div>
+  );
+};
+
+export default Categories;

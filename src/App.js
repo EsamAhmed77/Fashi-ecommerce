@@ -10,6 +10,7 @@ import Contact from "./Layout/components/blocks/Contact";
 import Blog from "./Layout/components/blocks/Blog";
 import BlogDetails from "./Layout/components/blocks/BlogDetails";
 import NavBar from "./Layout/components/NavBar";
+import Signing from "./Layout/components/blocks/Signing";
 const App = () => {
   return (
     <BrowserRouter>
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="/contact" exact component={Contact} />
           <Route path="/blog" exact component={Blog} />
           <Route path="/blog-details/:id" exact component={BlogDetails} />
+          <Route path="/login" exact component={Signing} />
         </Switch>
       </div>
     </BrowserRouter>

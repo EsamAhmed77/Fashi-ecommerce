@@ -138,10 +138,10 @@ const NavBar = () => {
           </Navbar.Collapse>
           <div className="bnb-left-area">
             <div className="icons">
-              <div className="header-icon">
-                <a href="/">
+              <div className="user-icon">
+                <Link to="/login">
                   <img src="/img/icon/icon-header-01.png" alt="header" />
-                </a>
+                </Link>
               </div>
               <div className="divider"></div>
               <div onClick={() => onCartClick()} className="cart-icon">
