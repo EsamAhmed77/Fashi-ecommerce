@@ -10,6 +10,7 @@ import { PriceFilter, ColorFilter } from "./Filters";
 import FavoriteProduct from "./FavoriteProduct";
 import {useDispatch, useSelector} from "react-redux";
 import {LoadProducts, postCart} from "../../../redux/action";
+import NavBar from "../NavBar";
 
 const Shop = () => {
   const dispatch = useDispatch();
@@ -19,6 +20,7 @@ const Shop = () => {
   const products = useSelector(state => state.products)
   return (
     <Container className="p-0 m-0" fluid>
+      <NavBar />
       <div className="women-shop">
         <div
           className="ws-banner"
@@ -133,7 +135,7 @@ const Shop = () => {
                           </div>
                           <img className="w-100" src={src} alt="" />
                           <button onClick={() => {
-                            discount? postCart({id, title, quantity:1 , discount}) : postCart({id, price, quantity:1, title});
+                            discount? postCart({title, quantity:1 ,total:discount, price:discount}, id) : postCart({price, quantity:1, total:price, title}, id);
 
                           }} className="add-btn">
                             add to cart

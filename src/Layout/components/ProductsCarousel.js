@@ -1,17 +1,13 @@
 import React, {useEffect} from "react";
 import {Link} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
-
 //
 import Container from "react-bootstrap/Container";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import {LoadTopProducts} from "../../redux/action";
-
 //
-import "./style/Main.scss";
 import "./style/productsCarousel.scss";
-
 //
 import FavoriteProduct from "./blocks/FavoriteProduct";
 

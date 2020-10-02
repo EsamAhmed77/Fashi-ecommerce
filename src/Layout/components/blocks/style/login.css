@@ -1,74 +1,115 @@
-.login-form {
-  width: 630px;
-  padding: 80px;
-  background-color: #e9e9e9;
+.login {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto; }
-  .login-form .header h2 {
-    font-family: SemiBold;
-    text-transform: uppercase;
-    font-size: 22px;
-    letter-spacing: 3px;
-    padding-bottom: 25px;
-    margin: 0; }
-  .login-form .form {
+  width: 100%;
+  height: 100vh; }
+  .login .login-form {
+    width: 580px;
+    padding: 40px 60px 60px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    width: 100%; }
-    .login-form .form p {
-      font-family: Medium;
-      font-size: 15px;
-      padding-bottom: 25px;
+    margin: 0 auto; }
+    .login .login-form .logo {
+      padding: 0 0 20px 0; }
+    .login .login-form .header h2 {
+      font-family: SemiBold;
+      text-transform: uppercase;
+      font-size: 22px;
+      letter-spacing: 3px;
+      padding-bottom: 45px;
       margin: 0; }
-    .login-form .form .inputs {
+    .login .login-form .form {
       display: flex;
       flex-direction: column;
+      align-items: center;
       width: 100%; }
-      .login-form .form .inputs input {
-        outline: none !important;
-        border: 1px solid #a5a5a5;
-        padding: 10px;
-        margin-bottom: 15px;
-        background-color: transparent;
+      .login .login-form .form .hint {
+        font-family: Medium;
         font-size: 14px;
-        color: #555555; }
-      .login-form .form .inputs div {
-        border: 1px solid #a5a5a5;
-        padding-right: 10px;
-        margin-bottom: 15px;
+        color: #e65540;
+        padding-bottom: 25px;
+        margin: 0; }
+      .login .login-form .form .inputs {
         display: flex;
-        justify-content: space-between;
-        align-items: center; }
-        .login-form .form .inputs div input {
-          padding: 10px;
-          margin: 0;
-          width: 75%;
-          height: 100%;
-          border: 0; }
-        .login-form .form .inputs div .forgot-password-btn {
-          color: #898989;
-          text-decoration: none !important;
-          font-size: 12px;
-          font-family: Medium;
-          text-transform: capitalize; }
-    .login-form .form .form-btn {
-      width: 100%;
-      border: 1px solid #a5a5a5;
-      background-color: transparent;
-      color: #000;
-      padding: 10px;
-      text-transform: uppercase;
-      font-family: Regular;
-      font-size: 16px;
-      letter-spacing: 2px;
-      transition: all .4s ease; }
-      .login-form .form .form-btn:hover, .login-form .form .form-btn:focus {
-        border: 1px solid #000;
-        background-color: #000;
-        color: #fff; }
+        flex-direction: column;
+        width: 100%; }
+        .login .login-form .form .inputs input {
+          outline: none !important;
+          border: 1px solid rgba(149, 149, 149, 0.8);
+          border-top: 0;
+          padding: 14px;
+          margin-bottom: 15px;
+          background-color: transparent;
+          border-radius: 25px;
+          font-size: 14px;
+          color: #555555;
+          transition: all .3s ease; }
+        .login .login-form .form .inputs .forgot-pass {
+          border: 1px solid rgba(149, 149, 149, 0.8);
+          border-top: 0;
+          padding-right: 10px;
+          margin-bottom: 15px;
+          border-radius: 25px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center; }
+          .login .login-form .form .inputs .forgot-pass input {
+            padding: 14px;
+            margin: 0;
+            width: 75%;
+            height: 100%;
+            border: 0;
+            box-shadow: none !important; }
+          .login .login-form .form .inputs .forgot-pass .forgot-password-btn {
+            color: #898989;
+            text-decoration: none !important;
+            font-size: 12px;
+            font-family: Medium;
+            text-transform: capitalize;
+            transition: all .3s ease; }
+            .login .login-form .form .inputs .forgot-pass .forgot-password-btn:hover {
+              color: #5f5f5f; }
+      .login .login-form .form .form-btn {
+        outline: none;
+        width: 100%;
+        text-align: center;
+        border: 1px solid #e65540;
+        background-color: #FFF;
+        color: #e65540;
+        padding: 10px;
+        text-transform: uppercase;
+        font-family: SemiBold;
+        font-size: 16px;
+        border-radius: 25px;
+        transition: all .4s ease; }
+        .login .login-form .form .form-btn:hover {
+          outline: none;
+          background-color: #e65540;
+          color: #fff; }
+    .login .login-form .create-account, .login .login-form .remember {
+      font-family: Medium;
+      padding-top: 20px;
+      font-size: 12px;
+      padding-bottom: 25px;
+      margin: 0;
+      color: #898989; }
+      .login .login-form .create-account .create-acc-btn, .login .login-form .create-account .log-back, .login .login-form .remember .create-acc-btn, .login .login-form .remember .log-back {
+        color: #898989;
+        text-decoration: none !important;
+        font-size: 12px;
+        font-family: Medium;
+        text-transform: capitalize;
+        transition: all .3s ease; }
+        .login .login-form .create-account .create-acc-btn:hover, .login .login-form .create-account .log-back:hover, .login .login-form .remember .create-acc-btn:hover, .login .login-form .remember .log-back:hover {
+          color: #474747; }
+  .login input::placeholder {
+    transition: all .2s; }
+  .login input:focus::placeholder {
+    color: transparent; }
+  .login input:hover, .login .forgot-pass:hover {
+    box-shadow: 0 1px 5px -2px grey; }
 
 /*# sourceMappingURL=login.css.map */

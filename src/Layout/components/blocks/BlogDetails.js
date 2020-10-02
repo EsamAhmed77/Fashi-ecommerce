@@ -7,6 +7,7 @@ import {postComment} from "../../../redux/action"
 import {useDispatch, useSelector} from "react-redux";
 
 import {LoadBlogs, LoadAds} from "../../../redux/action"
+import NavBar from "../NavBar";
 
 export default (props) => {
   const dispatch = useDispatch();
@@ -25,6 +26,7 @@ export default (props) => {
 
   return (
       <div>
+        <NavBar />
         <div className="blog-section">
           <ol className="breadcrumb" style={{background: "transparent"}}>
             <li className="breadcrumb-item">

@@ -6,6 +6,7 @@ import "./style/blogBlock.scss";
 import { Container, Row, Col } from "react-bootstrap";
 import {useDispatch, useSelector} from "react-redux";
 import {LoadAds, LoadBlogs} from "../../../redux/action";
+import NavBar from "../NavBar";
 
 const Blog = (props) => {
   const dispatch = useDispatch();
@@ -20,6 +21,7 @@ const Blog = (props) => {
   return (
     <div>
       <div className="blog-section">
+        <NavBar />
         <div
           className="blog-banner"
           style={{

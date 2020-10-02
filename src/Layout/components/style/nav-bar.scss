@@ -154,9 +154,19 @@
         background-color: #c7c5c59f;
         vertical-align: middle;
       }
+      .login-btn, .register-btn{
+        margin: 0 0 0 15px;
+        color: rgba(0,0,0,.5);
+        font-size: 16px;
+        font-family: "Regular";
+        text-decoration: none;
+        transition: all .3s ease;
 
-      .user-icon,
-      .cart-icon {
+        &:hover{
+          color: #e65540;
+        }
+      }
+      .cart-icon, .user-signing {
         display: inline-block;
         vertical-align: middle;
 
@@ -179,6 +189,14 @@
           img {
             width: 21px;
           }
+        }
+      }
+
+      .user-signing {
+        button {
+          background: transparent;
+          border: 0;
+          outline: none;
         }
       }
 
@@ -448,7 +466,6 @@
           margin: 0 15px;
           padding-top: 10px;
           padding-bottom: 10px;
-
           &::after {
             content: none;
           }

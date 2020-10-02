@@ -109,19 +109,19 @@ export function postComment(comment) {
 //------------------------------------------------//
 
 ///--------------cart action------------///
-export function postCart (product) {
-  database.ref('cart/').push({product: product}).catch((err) => console.log(err))
+export function postCart (product, id) {
+  database.ref('cart/').child(id).set(product).catch((err) => console.log(err))
 }
 
 export function  LoadCart () {
   return (dispatch) => {
-    return database.ref('cart').once('value').then(response => {
+    return database.ref('cart/').once('value').then(response => {
       let cart = []
       response.forEach(item => {
         cart.push(item.val())
       })
       dispatch({type: "LOAD_CART", payload: cart})
-    })
+    }).catch(err => console.log(err))
   }
 }
 
@@ -130,3 +130,7 @@ export function  LoadCart () {
 //   return database.ref('cart/').child('product/').update({quantity: currentQuantity}).then(r => console.log(r));
 //
 // }
+
+///--------------cart--------------///
+
+///--------------login-register-----------///

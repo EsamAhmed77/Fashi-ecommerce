@@ -1,0 +1,79 @@
+.contact .contact-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 240px;
+  margin-bottom: 60px; }
+  @media (max-width: 767px) {
+    .contact .contact-banner {
+      margin-bottom: 30px; } }
+  .contact .contact-banner .contact-header {
+    text-align: center; }
+    .contact .contact-banner .contact-header h1 {
+      font-size: 50px;
+      font-weight: bold;
+      color: #fff;
+      margin: 0;
+      text-transform: uppercase; }
+.contact .user-form {
+  padding: 0 10px;
+  width: 100%; }
+  @media (max-width: 767px) {
+    .contact .user-form {
+      padding: 0; } }
+  .contact .user-form .uf-header {
+    font-size: 26px;
+    line-height: 1.8;
+    color: rgba(124, 124, 124, 0.918); }
+  .contact .user-form .user-info input {
+    border: 1px solid #d6d6d6;
+    height: 50px;
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    outline: none !important;
+    padding: 0 20px;
+    font-size: 13px;
+    border-radius: 5px; }
+    .contact .user-form .user-info input::placeholder {
+      color: #808080; }
+    .contact .user-form .user-info input:focus::placeholder {
+      color: #fff; }
+  .contact .user-form textarea {
+    width: 100%;
+    border: 1px solid #d6d6d6;
+    padding: 20px;
+    font-size: 13px;
+    outline: none !important;
+    border-radius: 5px;
+    margin-bottom: 15px; }
+    .contact .user-form textarea::placeholder {
+      color: #808080; }
+    .contact .user-form textarea:focus::placeholder {
+      color: transparent; }
+  .contact .user-form .send-btn button {
+    outline: none !important;
+    border: none;
+    background-color: #222;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    border-radius: 25px;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    width: 150px;
+    height: 50px; }
+    .contact .user-form .send-btn button:hover {
+      background-color: #e65540; }
+
+.container {
+  max-width: 1200px; }
+
+.p-b-30 {
+  padding-bottom: 30px; }
+
+.min-height-530 {
+  min-height: 530px; }
+
+/*# sourceMappingURL=Contact.css.map */

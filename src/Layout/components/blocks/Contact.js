@@ -4,6 +4,7 @@ import GoogleMapReact from "google-map-react";
 import Footer from "../Footer";
 import "./style/Contact.scss";
 import { Container, Row, Col } from "react-bootstrap";
+import NavBar from "../NavBar";
 
 const AnyReactComponent = ({ text }) => (
   <div
@@ -27,6 +28,7 @@ class Contact extends Component {
   render() {
     return (
       <div className="contact">
+        <NavBar />
         <div
           className="contact-banner"
           style={{

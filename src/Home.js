@@ -10,11 +10,13 @@ import Blogs from "./Layout/components/Blogs";
 import Instagram from "./Layout/components/Instagram";
 import Shipping from "./Layout/components/Shipping";
 import Footer from "./Layout/components/Footer";
+import NavBar from "./Layout/components/NavBar";
 //
 
 export default (props) => {
   return (
     <Container className="p-0 m-0" fluid>
+      <NavBar p={props} />
       <OurCarousel />
       <Categories />
       <ProductsCarousel />

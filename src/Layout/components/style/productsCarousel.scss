@@ -42,20 +42,25 @@
     .alice-carousel__prev-btn,
     .alice-carousel__next-btn{
       position: absolute;
-      top: 50%;
+      top: 45%;
+      transform: translateY(-50%);
       width: 30px;
       height: 30px;
       background-color: #ffffff;
       border-radius: 50%;
     }
     .alice-carousel__prev-btn {
-      left: 0;
-    }
-    .alice-carousel__next-btn {
-      right: 0;
+      left: -20px;
 
       @media (max-width: 1000px) {
-        right: -25px;
+        right: -15px;
+      }
+    }
+    .alice-carousel__next-btn {
+      right: -20px;
+
+      @media (max-width: 1000px) {
+        right: -15px;
       }
     }
 

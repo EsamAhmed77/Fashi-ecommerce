@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,UAAW;EACT,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EACnB,cAAc,EAAE,MAAM;EACtB,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,IAAI;EAEX,aAAG;IACD,SAAS,EAAE,IAAI;IACf,WAAW,EAAE,mBAAmB;IAChC,cAAc,EAAE,SAAS",
+"sources": ["404Error.scss"],
+"names": [],
+"file": "404Error.css"
+}
