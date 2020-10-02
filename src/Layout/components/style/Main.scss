@@ -1,3 +1,58 @@
+@font-face {
+  font-family: 'Thin';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Montserrat Thin"), url("../../../assets/fonts/Montserrat-Thin.woff") format("woff");
+}
+@font-face {
+  font-family: 'ExtraLight';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../../assets/fonts/Montserrat-ExtraLight.woff") format("woff");
+}
+@font-face {
+  font-family: 'Light';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../../assets/fonts/Montserrat-Light.woff") format("woff");
+}
+@font-face {
+  font-family: 'Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../../assets/fonts/Montserrat-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: 'Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../../assets/fonts/Montserrat-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: 'SemiBold';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../../assets/fonts/Montserrat-SemiBold.woff") format("woff");
+}
+@font-face {
+  font-family: 'Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../../assets/fonts/Montserrat-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: 'ExtralBold';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../../assets/fonts/Montserrat-ExtraBold.woff") format("woff");
+}
+@font-face {
+  font-family: 'Black';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../../assets/fonts/Montserrat-Black.woff") format("woff");
+}
+
 *::after,
 *::before {
   margin: 0;
@@ -7,6 +62,10 @@
 
 html {
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Regular", BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" ;
 }
 
 .custom-switch,

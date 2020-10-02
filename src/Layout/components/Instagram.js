@@ -1,9 +1,16 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Link } from "react-router-dom";
 import "./style/instagram.scss";
-import { instagram } from "../../api/api";
+import {useDispatch, useSelector} from "react-redux";
+import {LoadInstagramView} from "../../redux/action";
 
 const Instagram = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(LoadInstagramView())
+  }, [dispatch])
+  const instagram = useSelector(state => state.instagramView)
+
   return (
     <div className="instagram-section">
       <div className="section-header text-center">

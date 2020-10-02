@@ -1,0 +1,94 @@
+.cat-grid {
+  padding: 40px 0; }
+  .cat-grid .container {
+    max-width: 1200px; }
+    @media (min-width: 992px) {
+      .cat-grid .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(autofill, 5vw);
+        grid-gap: 30px; }
+        .cat-grid .container .box1,
+        .cat-grid .container .box3 {
+          grid-row: 1/6; }
+        .cat-grid .container .box2 {
+          grid-row: 1/4; }
+        .cat-grid .container .box4,
+        .cat-grid .container .box6 {
+          grid-row: 6/10; }
+        .cat-grid .container .box5 {
+          grid-row: 4/10; } }
+    .cat-grid .container .category {
+      position: relative;
+      overflow: hidden; }
+      .cat-grid .container .category:hover img {
+        transform: scale(1.1); }
+      .cat-grid .container .category img {
+        width: 100%;
+        height: 100%;
+        transition: all 0.6s; }
+      .cat-grid .container .category a {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 12px 54px;
+        font-size: 14px;
+        text-transform: uppercase;
+        background-color: rgba(255, 255, 255, 0.959);
+        box-shadow: 0px 0px 2px rgba(207, 207, 207, 0.856);
+        color: #333333;
+        text-decoration: none;
+        transition: all 0.4s;
+        vertical-align: middle; }
+        .cat-grid .container .category a:hover {
+          background-color: #e65540;
+          color: #fff; }
+    .cat-grid .container .category-offer {
+      position: relative;
+      font-family: sans-serif; }
+      .cat-grid .container .category-offer .offer {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        text-align: center;
+        width: auto; }
+        .cat-grid .container .category-offer .offer h2 {
+          font-size: 22px;
+          font-weight: 400; }
+        .cat-grid .container .category-offer .offer p {
+          font-size: 16px;
+          margin-bottom: 30px;
+          color: #999999; }
+        .cat-grid .container .category-offer .offer a {
+          text-decoration: none;
+          color: #dddddd;
+          background: #000;
+          font-size: 16px;
+          padding: 10px 40px;
+          border-radius: 25px;
+          text-transform: uppercase; }
+
+@media (max-width: 991px) {
+  .category,
+  .category-offer {
+    margin-bottom: 30px; }
+
+  .offer h2 {
+    font-size: 36px; } }
+@media (min-width: 576px) and (max-width: 767px) {
+  .category,
+  .category-offer {
+    max-width: 83.33333%;
+    margin-right: auto;
+    margin-left: auto; } }
+@media (min-width: 768px) and (max-width: 991px) {
+  .category,
+  .category-offer {
+    max-width: 66.66667%;
+    margin-right: auto;
+    margin-left: auto; } }
+
+/*# sourceMappingURL=cat-grid.css.map */

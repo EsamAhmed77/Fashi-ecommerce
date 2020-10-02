@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 //
@@ -7,11 +7,20 @@ import "../style/productsCarousel.scss";
 //
 import Footer from "../Footer";
 import { PriceFilter, ColorFilter } from "./Filters";
-import { shopItems } from "../../../api/api";
 import FavoriteProduct from "./FavoriteProduct";
+import {useDispatch, useSelector} from "react-redux";
+import {LoadProducts, postCart} from "../../../redux/action";
+import NavBar from "../NavBar";
+
 const Shop = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(LoadProducts())
+  }, [dispatch])
+  const products = useSelector(state => state.products)
   return (
     <Container className="p-0 m-0" fluid>
+      <NavBar />
       <div className="women-shop">
         <div
           className="ws-banner"
@@ -104,7 +113,7 @@ const Shop = () => {
                 <div className="showed-pages">Showing 1–12 of 16 results</div>
               </div>
               <Row>
-                {(shopItems || []).map(
+                {(products || []).map(
                   ({
                     id,
                     src,
@@ -125,9 +134,12 @@ const Shop = () => {
                             <FavoriteProduct title={title} />
                           </div>
                           <img className="w-100" src={src} alt="" />
-                          <Link to="/cart" className="add-btn">
+                          <button onClick={() => {
+                            discount? postCart({title, quantity:1 ,total:discount, price:discount}, id) : postCart({price, quantity:1, total:price, title}, id);
+
+                          }} className="add-btn">
                             add to cart
-                          </Link>
+                          </button>
                         </div>
                         <div className="item-description">
                           <Link to="/cart">{title}</Link>

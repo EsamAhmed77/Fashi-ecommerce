@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./style/Main.scss";
 import swal from "sweetalert";
 
 const FavoriteProduct = (props) => {

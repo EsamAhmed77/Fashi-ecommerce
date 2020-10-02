@@ -2,6 +2,7 @@ import React from "react";
 import "./style/Cart.scss";
 import Container from "react-bootstrap/Container";
 import Footer from "../Footer";
+import NavBar from "../NavBar";
 
 class Cart extends React.Component {
   state = { menNumbers: 1, numbers: 1 };
@@ -11,6 +12,7 @@ class Cart extends React.Component {
   render() {
     return (
       <Container className="p-0 m-0" fluid>
+        <NavBar />
         <div className="cart">
           <div
             className="cart-banner"

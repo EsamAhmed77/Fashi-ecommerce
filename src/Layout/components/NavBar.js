@@ -1,17 +1,21 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import { Link } from "react-router-dom";
-//
-import "./style/Main.scss";
-import "./style/nav-bar.scss";
-//
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 //
+import "./style/nav-bar.scss";
+
+//
 import ProductsCart from "./blocks/ProductsCart";
-const NavBar = () => {
+import {firebase} from "../../database/config";
+
+const NavBar = ({p}) => {
+  console.log(p)
   const [currency, setCurrency] = useState("USA");
   const [visible, setVisible] = useState("d-none");
   const [cartVisibility, setCartVisibility] = useState("d-none");
+  const [userStatus, setUserStatus] = useState(false);
+  const [userData, setUserData] = useState({});
   //
   const onDropDownClick = (e) => {
     e.preventDefault();
@@ -23,6 +27,18 @@ const NavBar = () => {
     if (cartVisibility === "d-none") setCartVisibility("d-block");
     else setCartVisibility("d-none");
   };
+
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        setUserStatus(true);
+        setUserData(user);
+      } else {
+        console.log("There is no user!")
+      }
+    });
+  }, [])
+
   return (
     <div className="nav-bar">
       <div className="top-nav-bar">
@@ -138,10 +154,29 @@ const NavBar = () => {
           </Navbar.Collapse>
           <div className="bnb-left-area">
             <div className="icons">
-              <div className="header-icon">
-                <a href="/">
-                  <img src="/img/icon/icon-header-01.png" alt="header" />
-                </a>
+              <div className="user-signing">
+                {!userStatus ? <><Link className="login-btn" to="/login">
+                  Login
+                </Link>
+                  <Link className="register-btn" to="/register">
+                  Sign up
+                  </Link></> : <><Link className="register-btn" to="/settings">
+                  {(userData.displayName || "") + "'s Profile"}
+                </Link>
+                  <button
+                      onClick={() => {
+                        firebase.auth().signOut()
+                            .then(() => {
+                              // p.history.push("/")
+                              window.location.reload();
+                            })
+                            .catch(function(error) {
+                              console.log(error)
+                            });
+                      }}
+                      className="register-btn">
+                  Logout
+                  </button></>}
               </div>
               <div className="divider"></div>
               <div onClick={() => onCartClick()} className="cart-icon">

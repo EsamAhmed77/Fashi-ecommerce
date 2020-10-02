@@ -1,0 +1,27 @@
+.counter {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px; }
+  .counter .timer-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #83777c54;
+    background-color: #fff;
+    margin-right: 10px;
+    border-radius: 3px; }
+    .counter .timer-cell .time {
+      font-size: 18px;
+      line-height: 1;
+      vertical-align: bottom;
+      color: #555555e7; }
+    .counter .timer-cell .time-tag {
+      line-height: 1;
+      color: #83777ce5;
+      font-size: 15px;
+      text-transform: capitalize; }
+
+/*# sourceMappingURL=counter.css.map */
