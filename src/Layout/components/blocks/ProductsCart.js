@@ -5,7 +5,6 @@ import {useDispatch, useSelector} from "react-redux";
 import {LoadCart} from "../../../redux/action";
 
 const ProductsCart = (props) => {
-  const [ total, setTotal ] = useState(0)
   const dispatch = useDispatch();
 
   const cart = useSelector(state => state.cart);
@@ -18,7 +17,6 @@ const ProductsCart = (props) => {
     const newQuantity = parseInt(q);
     cart[id].quantity = newQuantity + 1;
     cart[id].total = (cart[id].quantity * cart[id].price).toFixed(2);
-    setTotal(cart[id].total)
   }
 
   function decrementQuantity(q, id) {
@@ -46,12 +44,10 @@ const ProductsCart = (props) => {
                             <div className="quantity">
                               <button onClick={() => {
                                 incrementQuantity(product.quantity, id);
-                                setTotal(cart[id].total)
                               }}><i
                                   className="fas fa-plus"></i></button>
                               <button onClick={() => {
                                 decrementQuantity(product.quantity, id);
-                                setTotal(cart[id].total)
                               }}>
                                 <i className="fas fa-minus"></i>
                               </button>
