@@ -96,29 +96,6 @@ export default (props) => {
                       <h4>leave a comment</h4>
                       <h6>Your email address will not be published. Required fields are marked *</h6>
                       <div className="comment-form">
-                        {/* comment area still needs works*/}
-                        {/*{*/}
-                        {/*  (this.state.comment.map(({i, Name, Email, Website, CommentValue}) => (*/}
-                        {/*      <div key={i} className="ui container comment">*/}
-                        {/*        <div  className="comment">*/}
-                        {/*          <div className="avatar">*/}
-                        {/*            <img alt="avatar" src={faker.image.avatar()}/>*/}
-                        {/*          </div>*/}
-                        {/*          <div className="content">*/}
-                        {/*            <div className="author">*/}
-                        {/*              {Email}*/}
-                        {/*            </div>*/}
-                        {/*            <br/>*/}
-                        {/*            <div className="author">*/}
-                        {/*              {Name}*/}
-                        {/*            </div>*/}
-                        {/*            <br/>*/}
-                        {/*          </div>*/}
-                        {/*          <div className="text">{CommentValue}</div>*/}
-                        {/*        </div>*/}
-                        {/*      </div>*/}
-                        {/*  )))*/}
-                        {/*}*/}
                         <textarea
                             name="comment"
                             rows="5"
@@ -176,7 +153,7 @@ export default (props) => {
                           </div>
                           <div className="details">
                             <a href="/">{title}</a>
-                            <span>{price}</span>
+                            <span>${price}</span>
                           </div>
                         </li>
                     ))}

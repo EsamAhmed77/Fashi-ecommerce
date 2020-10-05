@@ -101,81 +101,81 @@
       "id": 1,
       "src": "/img/item-02.jpg",
       "title": "Herschel supply co 25l",
-      "price": "$75.00",
+      "price": "75.00",
       "newProduct": "new-product"
     },
     {
       "id": 2,
       "src": "/img/item-03.jpg",
       "title": "Denim jacket blue",
-      "price": "$92.50"
+      "price": "92.50"
     },
     {
       "id": 3,
       "src": "/img/item-05.jpg",
       "title": "Coach slim easton black",
-      "price": "$165.90"
+      "price": "165.90"
     },
     {
       "id": 4,
       "src": "/img/item-07.jpg",
       "title": "Frayed denim shorts",
-      "price": "$29.50",
-      "discount": "$15.50",
+      "price": "29.50",
+      "discount": "15.50",
       "saleProduct": "sale-product"
     },
     {
       "id": 5,
       "src": "/img/item-01.jpg",
       "title": "Herschel supply co 25l",
-      "price": "$75.00",
+      "price": "75.00",
       "newProduct": "new-product"
     },
     {
       "id": 6,
       "src": "/img/item-14.jpg",
       "title": "Denim jacket blue",
-      "price": "$92.50"
+      "price": "92.50"
     },
     {
       "id": 7,
       "src": "/img/item-06.jpg",
       "title": "Herschel supply co 25l",
-      "price": "$75.00",
+      "price": "75.00",
       "newProduct": "new-product"
     },
     {
       "id": 8,
       "src": "/img/item-08.jpg",
       "title": "Denim jacket blue",
-      "price": "$92.50"
+      "price": "92.50"
     },
     {
       "id": 9,
       "src": "/img/item-10.jpg",
       "title": "Coach slim easton black",
-      "price": "$165.90"
+      "price": "165.90"
     },
     {
       "id": 10,
       "src": "/img/item-11.jpg",
       "title": "Frayed denim shorts",
-      "price": "$29.50",
-      "discount": "$15.50",
+      "price": "29.50",
+      "discount": "15.50",
       "saleProduct": "sale-product"
     },
     {
       "id": 11,
       "src": "/img/item-12.jpg",
       "title": "Herschel supply co 25l",
-      "price": "$75.00",
+      "price": "75.00",
       "newProduct": "new-product"
     },
     {
       "id": 12,
       "src": "/img/item-15.jpg",
       "title": "Denim jacket blue",
-      "price": "$92.50"
+      "price": "92.50"
     }
   ],
 
@@ -249,19 +249,19 @@
       "id": 1,
       "img": "/img/item-cart-01.jpg",
       "productTitle": "White Shirt With Pleat Detail Back",
-      "productPrice": "$19.00"
+      "productPrice": "19.00"
     },
     {
       "id": 2,
       "img": "/img/item-cart-02.jpg",
       "productTitle": "Converse All Star Hi Black Canvas",
-      "productPrice": "$39.00"
+      "productPrice": "39.00"
     },
     {
       "id": 3,
       "img": "/img/item-cart-03.jpg",
       "productTitle": "Nixon Porter Leather Watch In Tan",
-      "productPrice": "$17.00"
+      "productPrice": "17.00"
     }
   ],
   "ads": [
@@ -269,31 +269,31 @@
       "id": 1,
       "img": "/img/item-17.jpg",
       "title": "White Shirt With Pleat Detail Back",
-      "price": "$39.00"
+      "price": "39.00"
     },
     {
       "id": 2,
       "img": "/img/item-16.jpg",
       "title": "Converse All Star Hi Black Canvas",
-      "price": "$9.00"
+      "price": "9.00"
     },
     {
       "id": 3,
       "img": "/img/item-08.jpg",
       "title": "Nixon Porter Leather Watch In Tan",
-      "price": "$77.00"
+      "price": "77.00"
     },
     {
       "id": 4,
       "img": "/img/item-05.jpg",
       "title": "Converse All Star Hi Black Canvas",
-      "price": "$29.00"
+      "price": "29.00"
     },
     {
       "id": 5,
       "img": "/img/item-03.jpg",
       "title": "Denim jacket blue",
-      "price": "$57.00"
+      "price": "57.00"
     }
   ],
   "top-products": [
@@ -301,27 +301,27 @@
       "id": 1,
       "src": "/img/item-02.jpg",
       "title": "Herschel supply co 25l",
-      "price": "$75.00",
+      "price": "75.00",
       "newProduct": "new-product"
     },
     {
       "id": 2,
       "src": "/img/item-03.jpg",
       "title": "Denim jacket blue",
-      "price": "$92.50"
+      "price": "92.50"
     },
     {
       "id": 3,
       "src": "/img/item-05.jpg",
       "title": "Coach slim easton black",
-      "price": "$165.90"
+      "price": "165.90"
     },
     {
       "id": 4,
       "src": "/img/item-07.jpg",
       "title": "Frayed denim shorts",
-      "price": "$29.50",
-      "discount": "$15.50",
+      "price": "29.50",
+      "discount": "15.50",
       "saleProduct": "sale-product"
     }
   ]

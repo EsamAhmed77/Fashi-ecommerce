@@ -136,7 +136,6 @@ const Shop = () => {
                           <img className="w-100" src={src} alt="" />
                           <button onClick={() => {
                             discount? postCart({title, quantity:1 ,total:discount, price:discount}, id) : postCart({price, quantity:1, total:price, title}, id);
-
                           }} className="add-btn">
                             add to cart
                           </button>
@@ -146,11 +145,11 @@ const Shop = () => {
                           <div>
                             {discount ? (
                               <>
-                                <span className="old-price">{price}</span>
-                                <span className="new-price">{discount}</span>
+                                <span className="old-price">${price}</span>
+                                <span className="new-price">${discount}</span>
                               </>
                             ) : (
-                              <span>{price}</span>
+                              <span>${price}</span>
                             )}
                           </div>
                         </div>
