@@ -10,7 +10,6 @@ import ProductsCart from "./blocks/ProductsCart";
 import {firebase} from "../../database/config";
 
 const NavBar = ({p}) => {
-  console.log(p)
   const [currency, setCurrency] = useState("USA");
   const [visible, setVisible] = useState("d-none");
   const [cartVisibility, setCartVisibility] = useState("d-none");
@@ -33,8 +32,6 @@ const NavBar = ({p}) => {
       if (user) {
         setUserStatus(true);
         setUserData(user);
-      } else {
-        console.log("There is no user!")
       }
     });
   }, [])
