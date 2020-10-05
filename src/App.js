@@ -1,5 +1,5 @@
 import React from "react";
-import { Router, Route } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import Switch from "react-bootstrap/esm/Switch";
 //
 import Home from "./Home";
@@ -16,7 +16,7 @@ import { ForgetPassword } from "./Layout/components/blocks/account";
 import history from "./Layout/components/history/history";
 const App = () => {
   return (
-    <Router history={history}>
+    <BrowserRouter history={history}>
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/cart" exact component={Cart} />
@@ -30,7 +30,7 @@ const App = () => {
           <Route path="/reset-password" exact component={ForgetPassword} />
           {/*<Route path="*" exact component={Error404} />*/}
         </Switch>
-    </Router>
+    </BrowserRouter>
   );
 };
 
