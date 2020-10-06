@@ -24,4 +24,16 @@
       font-size: 15px;
       text-transform: capitalize; }
 
+@media (max-width: 500px) {
+  .counter {
+    margin-top: 15px !important; }
+    .counter .timer-cell {
+      width: 40px;
+      height: 40px; }
+      .counter .timer-cell .time {
+        font-size: 14px;
+        line-height: 1.5; }
+      .counter .timer-cell .time-tag {
+        font-size: 12px; } }
+
 /*# sourceMappingURL=counter.css.map */

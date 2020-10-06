@@ -68,5 +68,10 @@
 @media (max-width: 991px) {
   .md-margin {
     margin-bottom: 30px; } }
+@media (max-width: 500px) {
+  .timer-content {
+    bottom: 15px !important; }
+    .timer-content .prices {
+      margin: 5px 0 0 !important; } }
 
 /*# sourceMappingURL=timer.css.map */

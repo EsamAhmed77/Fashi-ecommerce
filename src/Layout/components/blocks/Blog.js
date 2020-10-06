@@ -74,7 +74,7 @@ const Blog = (props) => {
                 <Link to="/shop">2</Link>
               </div>
             </Col>
-            <Col md={4} lg={3}>
+            <Col className="display-none-sm" md={4} lg={3}>
               <div className="d-flex flex-column">
                 <div className="search-input">
                   <input type="search" placeholder="Search" />

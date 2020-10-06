@@ -489,3 +489,9 @@
 .p-b-50{
   padding-bottom: 50px;
 }
+
+@media (max-width: 767px){
+  .display-none-sm{
+    display: none !important;
+  }
+}

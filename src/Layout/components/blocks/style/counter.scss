@@ -27,3 +27,20 @@
     }
   }
 }
+
+@media (max-width: 500px) {
+  .counter{
+    margin-top: 15px !important;
+    .timer-cell{
+      width: 40px;
+      height: 40px;
+      .time{
+        font-size: 14px;
+        line-height: 1.5;
+      }
+      .time-tag{
+        font-size: 12px;
+      }
+    }
+  }
+}
