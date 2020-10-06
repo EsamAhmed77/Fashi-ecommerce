@@ -5,7 +5,7 @@ import {useDispatch, useSelector} from "react-redux";
 import Container from "react-bootstrap/Container";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
-import {LoadTopProducts} from "../../redux/action";
+import {LoadTopProducts, postCart} from "../../redux/action";
 //
 import "./style/productsCarousel.scss";
 //
@@ -48,20 +48,23 @@ export default () => {
                             <FavoriteProduct title={title} />
                           </div>
                           <img className="w-100" src={src} alt="" />
-                          <Link to="/cart" className="add-btn">
+                          <button onClick={() => {
+                            discount? postCart({title, quantity:1 ,total:discount, price:discount}, id) : postCart({price, quantity:1, total:price, title}, id);
+
+                          }} className="add-btn">
                             add to cart
-                          </Link>
+                          </button>
                         </div>
                         <div className="item-description">
                           <Link to="/cart">{title}</Link>
                           <div>
                             {discount ? (
                                 <>
-                                  <span className="old-price">{price}</span>
-                                  <span className="new-price">{discount}</span>
+                                  <span className="old-price">${price}</span>
+                                  <span className="new-price">${discount}</span>
                                 </>
                             ) : (
-                                <span>{price}</span>
+                                <span>${price}</span>
                             )}
                           </div>
                         </div>

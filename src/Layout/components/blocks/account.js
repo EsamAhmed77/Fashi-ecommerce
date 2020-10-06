@@ -21,7 +21,7 @@ export const Login = (p) => {
     auth.signInWithEmailAndPassword(values.email, values.password).then(() => {
       auth.onAuthStateChanged(user => {
         if (user) {
-          console.log(user);
+
           p.history.push("/")
         } else {
           setError("An error occurred")
@@ -29,7 +29,6 @@ export const Login = (p) => {
       })
     }).catch(error => {
       setError(errs[error.message]);
-      console.log(error.message);
     });
   }
 

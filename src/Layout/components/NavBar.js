@@ -10,7 +10,6 @@ import ProductsCart from "./blocks/ProductsCart";
 import {firebase} from "../../database/config";
 
 const NavBar = ({p}) => {
-  console.log(p)
   const [currency, setCurrency] = useState("USA");
   const [visible, setVisible] = useState("d-none");
   const [cartVisibility, setCartVisibility] = useState("d-none");
@@ -33,8 +32,6 @@ const NavBar = ({p}) => {
       if (user) {
         setUserStatus(true);
         setUserData(user);
-      } else {
-        console.log("There is no user!")
       }
     });
   }, [])
@@ -104,6 +101,32 @@ const NavBar = ({p}) => {
                   <i className="fab fa-youtube"></i>
                 </a>
               </div>
+              <div className="signing-btns display-block-md">
+                <div className="sm-user-signing">
+                {!userStatus ? <><Link className="signing-btn" to="/login">
+                  Login
+                </Link>
+                  <Link className="signing-btn" to="/register">
+                    Sign up
+                  </Link></> : <><Link className="signing-btn" to="/settings">
+                  {(userData.displayName || "") + "'s Profile"}
+                </Link>
+                  <button
+                      onClick={() => {
+                        firebase.auth().signOut()
+                            .then(() => {
+                              // p.history.push("/")
+                              window.location.reload();
+                            })
+                            .catch(function(error) {
+                              console.log(error)
+                            });
+                      }}
+                      className="signing-btn">
+                    Logout
+                  </button></>}
+              </div>
+              </div>
               <div className="free-shipping">
                 Free shipping for standard order over $100
               </div>
@@ -154,13 +177,13 @@ const NavBar = ({p}) => {
           </Navbar.Collapse>
           <div className="bnb-left-area">
             <div className="icons">
-              <div className="user-signing">
-                {!userStatus ? <><Link className="login-btn" to="/login">
+              <div className="user-signing display-none-md">
+                {!userStatus ? <><Link className="signing-btn" to="/login">
                   Login
                 </Link>
-                  <Link className="register-btn" to="/register">
+                  <Link className="signing-btn" to="/register">
                   Sign up
-                  </Link></> : <><Link className="register-btn" to="/settings">
+                  </Link></> : <><Link className="signing-btn" to="/settings">
                   {(userData.displayName || "") + "'s Profile"}
                 </Link>
                   <button
@@ -174,11 +197,11 @@ const NavBar = ({p}) => {
                               console.log(error)
                             });
                       }}
-                      className="register-btn">
+                      className="signing-btn">
                   Logout
                   </button></>}
               </div>
-              <div className="divider"></div>
+              <div className="divider display-none-md"></div>
               <div onClick={() => onCartClick()} className="cart-icon">
                 <img src="/img/icon/icon-header-02.png" alt="cart" />
                 <div className="cart-orders"></div>

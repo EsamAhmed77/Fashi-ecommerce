@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 //
-import { LoadCart } from "../../../redux/action";
+import {LoadCart} from "../../../redux/action";
 
 const ProductsCart = (props) => {
   const dispatch = useDispatch();
@@ -12,60 +12,62 @@ const ProductsCart = (props) => {
     dispatch(LoadCart())
   }, [dispatch]);
 
-  const [ quantity, setQuantity ] = useState(1);
-  function incrementQuantity (q, id) {
+  const [quantity, setQuantity] = useState(1);
+  function incrementQuantity(q, id) {
     const newQuantity = parseInt(q);
-    setQuantity( newQuantity + 1);
+    setQuantity(newQuantity + 1);
     cart[id].quantity = newQuantity + 1;
     cart[id].total = (cart[id].quantity * cart[id].price).toFixed(2);
   }
 
-  // function decrementQuantity (q, id) {
-  //   const newQuantity = parseInt(q);
-  //   setQuantity( newQuantity - 1);
-  //   cart[id].quantity = newQuantity + 1;
-  //   cart[id].total = (cart[id].quantity * cart[id].price).toFixed(2);
-  // }
-
+  function decrementQuantity(q, id) {
+    const newQuantity = parseInt(q);
+    setQuantity(newQuantity - 1);
+    cart[id].quantity = newQuantity - 1;
+    cart[id].total = (cart[id].quantity * cart[id].price).toFixed(2);
+  }
   return (
-    <div className={`products-cart ${props.show}`}>
-      <div className="cart-header">
-        Fashe
-      </div>
-      <div className="cart">
-        <div className="all-products">
-          {
-              (cart.map((product,id) => (
-                  <div key={id}>
-                    <div className="product">
-                      <div className="product-details">
-                        <a href="/">{product.title}</a>
-                        <div className="price-quantity">
-                          <span>{product.quantity} x {product.price} = {product.total}</span>
-                          <button onClick={() => incrementQuantity(quantity, id)} className="quantity-control">
-                            increment
-                          </button>
+      <div className={`products-cart ${props.show}`}>
+        <div className="cart-header">
+          Fashe
+        </div>
+        <div className="cart">
+          <div className="all-products">
+            {
+              (cart.map((product, id) => (
+                      <div key={id}>
+                        <div className="product">
+                          <div className="product-info">{product.title}</div>
+                          <div className="product-info d-flex justify-content-between align-items-center">
+                            <span className={"info"}>{product.quantity} x ${product.price}</span>
+                            <span className={"info"}> total: {cart[id].total}</span>
+                            <div className="quantity">
+                              <button onClick={() => {
+                                incrementQuantity(product.quantity, id);
+                              }}><i className="fas fa-plus"></i></button>
+                              <button onClick={() => product.quantity > 1 ? decrementQuantity(product.quantity, id) : ""}>
+                                <i className="fas fa-minus"></i>
+                              </button>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-              ))
-            )
-          }
-        </div>
-        <div>
-          <div  className="total-price text-right">Total: </div>
-          <div className="cart-btns">
-           <Link className="link" to="/cart">
-              VIEW CART
-            </Link>
-            <Link className="link" to="/">
-             CHECK OUT
-            </Link>
+                  ))
+              )
+            }
+          </div>
+          <div>
+            <div className="cart-btns">
+              <Link className="link" to="/cart">
+                VIEW CART
+              </Link>
+              <Link className="link" to="/">
+                CHECK OUT
+              </Link>
+            </div>
           </div>
         </div>
       </div>
-    </div>
   );
 };
 
