@@ -1,6 +1,6 @@
 import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
-import Switch from "react-bootstrap/esm/Switch";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+
 //
 import Home from "./Home";
 import Cart from "./Layout/components/blocks/Cart";
