@@ -21,9 +21,9 @@ export default (props) => {
     if(blogs.length <= 0) {
       dispatch(LoadBlogs());
       dispatch(LoadAds());
+      document.title = (blogs[id - 1] || []).title;
     }
-  }, [blogs.length, dispatch])
-
+  }, [blogs, blogs.length, dispatch, id])
   return (
       <div>
         <NavBar />

@@ -41,19 +41,19 @@ const NavBar = ({p}) => {
       <div className="top-nav-bar">
         <div className="socialMedia-links">
           <a href="/">
-            <i className="fab fa-facebook-f"></i>
+            <i className="fab fa-facebook-f"> </i>
           </a>
           <a href="/">
-            <i className="fab fa-instagram"></i>
+            <i className="fab fa-instagram"> </i>
           </a>
           <a href="/">
-            <i className="fab fa-pinterest-p"></i>
+            <i className="fab fa-pinterest-p"> </i>
           </a>
           <a href="/">
-            <i className="fab fa-snapchat-ghost"></i>
+            <i className="fab fa-snapchat-ghost"> </i>
           </a>
           <a href="/">
-            <i className="fab fa-youtube"></i>
+            <i className="fab fa-youtube"> </i>
           </a>
         </div>
         <div className="free-shipping">
@@ -64,7 +64,7 @@ const NavBar = ({p}) => {
           <div onClick={onDropDownClick} className="d-inline-block">
             <a href="/" className="language">
               {currency}
-              <i className="fas fa-angle-down"></i>
+              <i className="fas fa-angle-down"> </i>
             </a>
             <div className={`lang-list ${visible}`}>
               <div onClick={() => setCurrency("USA")}>USA</div>
@@ -86,27 +86,27 @@ const NavBar = ({p}) => {
             <div className="top-nav-collapse">
               <div className="socialMedia-links">
                 <a href="/">
-                  <i className="fab fa-facebook-f"></i>
+                  <i className="fab fa-facebook-f"> </i>
                 </a>
                 <a href="/">
-                  <i className="fab fa-instagram"></i>
+                  <i className="fab fa-instagram"> </i>
                 </a>
                 <a href="/">
-                  <i className="fab fa-pinterest-p"></i>
+                  <i className="fab fa-pinterest-p"> </i>
                 </a>
                 <a href="/">
-                  <i className="fab fa-snapchat-ghost"></i>
+                  <i className="fab fa-snapchat-ghost"> </i>
                 </a>
                 <a href="/">
-                  <i className="fab fa-youtube"></i>
+                  <i className="fab fa-youtube"> </i>
                 </a>
               </div>
               <div className="signing-btns display-block-md">
                 <div className="sm-user-signing">
-                {!userStatus ? <><Link className="signing-btn" to="/login">
+                {!userStatus ? <><Link className="signing-btn" to="/user/login">
                   Login
                 </Link>
-                  <Link className="signing-btn" to="/register">
+                  <Link className="signing-btn" to="/user/register">
                     Sign up
                   </Link></> : <><Link className="signing-btn" to="/settings">
                   {(userData.displayName || "") + "'s Profile"}
@@ -135,7 +135,7 @@ const NavBar = ({p}) => {
                 <div onClick={onDropDownClick} className="d-inline-block">
                   <a href="/" className="language">
                     {currency}
-                    <i className="fas fa-angle-down"></i>
+                    <i className="fas fa-angle-down"> </i>
                   </a>
                   <div className={`lang-list ${visible}`}>
                     <div onClick={() => setCurrency("USA")}>USA</div>
@@ -178,12 +178,12 @@ const NavBar = ({p}) => {
           <div className="bnb-left-area">
             <div className="icons">
               <div className="user-signing display-none-md">
-                {!userStatus ? <><Link className="signing-btn" to="/login">
+                {!userStatus ? <><Link className="signing-btn" to="/user/login">
                   Login
                 </Link>
                   <Link className="signing-btn" to="/register">
                   Sign up
-                  </Link></> : <><Link className="signing-btn" to="/settings">
+                  </Link></> : <><Link className="signing-btn" to="/user/settings">
                   {(userData.displayName || "") + "'s Profile"}
                 </Link>
                   <button
@@ -201,10 +201,10 @@ const NavBar = ({p}) => {
                   Logout
                   </button></>}
               </div>
-              <div className="divider display-none-md"></div>
+              <div className="divider display-none-md"> </div>
               <div onClick={() => onCartClick()} className="cart-icon">
                 <img src="/img/icon/icon-header-02.png" alt="cart" />
-                <div className="cart-orders"></div>
+                <div className="cart-orders"> </div>
               </div>
             </div>
             <ProductsCart show={cartVisibility} />

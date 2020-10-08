@@ -14,6 +14,7 @@ const Blog = (props) => {
   useEffect(() => {
     dispatch(LoadBlogs());
     dispatch(LoadAds());
+    document.title = "Blog - Fashe"
   }, [dispatch])
   const blogs = useSelector(state => state.blogs)
   const ads = useSelector(state => state.ads)

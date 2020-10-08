@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 //
 import {LoadCart} from "../../../redux/action";
+import {database} from "../../../database/config";
 
 const ProductsCart = (props) => {
   const dispatch = useDispatch();
@@ -12,20 +13,9 @@ const ProductsCart = (props) => {
     dispatch(LoadCart())
   }, [dispatch]);
 
-  const [quantity, setQuantity] = useState(1);
-  function incrementQuantity(q, id) {
-    const newQuantity = parseInt(q);
-    setQuantity(newQuantity + 1);
-    cart[id].quantity = newQuantity + 1;
-    cart[id].total = (cart[id].quantity * cart[id].price).toFixed(2);
-  }
+  // eslint-disable-next-line
 
-  function decrementQuantity(q, id) {
-    const newQuantity = parseInt(q);
-    setQuantity(newQuantity - 1);
-    cart[id].quantity = newQuantity - 1;
-    cart[id].total = (cart[id].quantity * cart[id].price).toFixed(2);
-  }
+  console.log(cart)
   return (
       <div className={`products-cart ${props.show}`}>
         <div className="cart-header">
@@ -33,30 +23,70 @@ const ProductsCart = (props) => {
         </div>
         <div className="cart">
           <div className="all-products">
-            {
-              (cart.map((product, id) => (
-                      <div key={id}>
-                        <div className="product">
-                          <div className="product-info">{product.title}</div>
-                          <div className="product-info d-flex justify-content-between align-items-center">
-                            <span className={"info"}>{product.quantity} x ${product.price}</span>
-                            <span className={"info"}> total: {cart[id].total}</span>
-                            <div className="quantity">
-                              <button onClick={() => {
-                                incrementQuantity(product.quantity, id);
-                              }}><i className="fas fa-plus"></i></button>
-                              <button onClick={() => product.quantity > 1 ? decrementQuantity(product.quantity, id) : ""}>
-                                <i className="fas fa-minus"></i>
-                              </button>
-                            </div>
+            {(cart.map((product) => {
+                  return <div key={product.id}>
+
+                    <div className="product">
+
+                      <img src={product.src} alt={"product"}/>
+
+                      <div className="product-info">
+
+                        <div className="product-info">{product.title}</div>
+
+                        <div className="d-flex justify-content-between align-items-center">
+
+                          <span className="info">{product.quantity} x ${product.price}</span>
+
+                          <div className="quantity">
+
+                            <button
+                                onClick={() => {
+                                  database.ref('cart/' + product.id).set({
+                                    id: product.id,
+                                    title: product.title,
+                                    price: product.price,
+                                    src: product.src,
+                                    quantity: (product.quantity + 1),
+                                  })
+                                      .then(() => dispatch(LoadCart()))
+                                      .catch((err) => console.log(err))
+                                }}
+                            >
+                              <i className="fas fa-plus"> </i>
+                            </button>
+
+                            <button
+                                onClick={() => {
+                                  database.ref('cart/' + product.id).set({
+                                    id: product.id,
+                                    title: product.title,
+                                    price: product.price,
+                                    src: product.src,
+                                    quantity: product.quantity - 1 === 0 ? 1 : (product.quantity - 1),
+                                  })
+                                      .then(() => dispatch(LoadCart()))
+                                      .catch((err) => console.log(err))
+                                }}
+                            >
+                              <i className="fas fa-minus"> </i>
+                            </button>
+
                           </div>
+
+                        </div>
+
+                        <div>
+                          <span className="info"> total: {product.quantity * product.price}</span>
                         </div>
                       </div>
-                  ))
-              )
+                    </div>
+                  </div>
+                })
+            )
             }
           </div>
-          <div>
+          <div className="mt-3">
             <div className="cart-btns">
               <Link className="link" to="/cart">
                 VIEW CART

@@ -25,6 +25,11 @@ class Contact extends Component {
     zoom: 11,
   };
 
+  constructor(props) {
+    super(props);
+    document.title = "Contact - Fashe"
+  }
+
   render() {
     return (
       <div className="contact">

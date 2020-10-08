@@ -9,14 +9,16 @@ import Footer from "../Footer";
 import { PriceFilter, ColorFilter } from "./Filters";
 import FavoriteProduct from "./FavoriteProduct";
 import {useDispatch, useSelector} from "react-redux";
-import {LoadProducts, postCart} from "../../../redux/action";
+import {LoadCart, LoadProducts, postCart} from "../../../redux/action";
 import NavBar from "../NavBar";
 
 const Shop = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(LoadProducts())
+    dispatch(LoadProducts());
+    document.title = "Shop - Fashe";
   }, [dispatch])
+
   const products = useSelector(state => state.products)
   return (
     <Container className="p-0 m-0" fluid>
@@ -122,20 +124,28 @@ const Shop = () => {
                     newProduct,
                     discount,
                     saleProduct,
-                  }) => (
-                    <Col key={id} sm={12} md={6} lg={4}>
+                  }) => {
+                    return <Col key={id} sm={12} md={6} lg={4}>
                       <div className="item p-b-50 m-0">
                         <div
-                          className={`item-img ${
-                            newProduct ? newProduct : ""
-                          } ${saleProduct ? saleProduct : ""}`}
+                            className={`item-img ${
+                                newProduct ? newProduct : ""
+                            } ${saleProduct ? saleProduct : ""}`}
                         >
                           <div className="item-fav-icon">
-                            <FavoriteProduct title={title} />
+                            <FavoriteProduct title={title}/>
                           </div>
-                          <img className="w-100" src={src} alt="" />
+                          <img className="w-100" src={src} alt=""/>
                           <button onClick={() => {
-                            discount? postCart({title, quantity:1 ,total:discount, price:discount}, id) : postCart({price, quantity:1, total:price, title}, id);
+                            console.log("D:", discount, " P: ", price)
+                            discount ? postCart({
+                              id,
+                              title,
+                              src,
+                              quantity: 1,
+                              price: discount
+                            }, id) : postCart({id, price, src, quantity: 1, title}, id);
+                            dispatch(LoadCart());
                           }} className="add-btn">
                             add to cart
                           </button>
@@ -144,18 +154,18 @@ const Shop = () => {
                           <Link to="/cart">{title}</Link>
                           <div>
                             {discount ? (
-                              <>
-                                <span className="old-price">${price}</span>
-                                <span className="new-price">${discount}</span>
-                              </>
+                                <>
+                                  <span className="old-price">${price}</span>
+                                  <span className="new-price">${discount}</span>
+                                </>
                             ) : (
-                              <span>${price}</span>
+                                <span>${price}</span>
                             )}
                           </div>
                         </div>
                       </div>
                     </Col>
-                  )
+                  }
                 )}
               </Row>
               <div className="pages">

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Container from "react-bootstrap/Container";
 //
 import "./Layout/components/style/Main.scss";
@@ -14,6 +14,11 @@ import NavBar from "./Layout/components/NavBar";
 //
 
 export default (props) => {
+
+  useEffect(() => {
+    document.title = "Home -Fashe"
+  });
+
   return (
     <Container className="p-0 m-0" fluid>
       <NavBar p={props} />

@@ -110,7 +110,7 @@ export function postComment(comment) {
 
 ///--------------cart action------------///
 export function postCart (product, id) {
-  database.ref('cart/').child(id).set(product).catch((err) => console.log(err))
+  database.ref('cart/'+id).set(product).catch((err) => console.log(err))
 }
 
 export function  LoadCart () {
@@ -125,12 +125,13 @@ export function  LoadCart () {
   }
 }
 
-// export function updateQuantity  (currentQuantity) {
-//
-//   return database.ref('cart/').child('product/').update({quantity: currentQuantity}).then(r => console.log(r));
-//
-// }
-
+export function deleteProduct (id) {
+  database.ref('users/' + id).remove().then(() => {
+    console.log("removed")
+  }).catch((err) => {
+    console.log(err);
+  })
+}
 ///--------------cart--------------///
 
 ///--------------login-register-----------///
