@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+
 //
 import Home from "./Home";
 import Cart from "./Layout/components/blocks/Cart";
