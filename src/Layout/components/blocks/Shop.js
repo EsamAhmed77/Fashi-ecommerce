@@ -137,7 +137,6 @@ const Shop = () => {
                           </div>
                           <img className="w-100" src={src} alt=""/>
                           <button onClick={() => {
-                            console.log("D:", discount, " P: ", price)
                             discount ? postCart({
                               id,
                               title,

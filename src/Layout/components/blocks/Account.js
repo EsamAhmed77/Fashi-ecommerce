@@ -281,7 +281,6 @@ const ForgetPassword = (p) => {
 **/
 
 export default (props)=> {
-  console.log(props)
   let location = props.location.pathname;
 
   switch(location) {

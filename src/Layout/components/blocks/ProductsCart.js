@@ -15,7 +15,6 @@ const ProductsCart = (props) => {
 
   // eslint-disable-next-line
 
-  console.log(cart)
   return (
       <div className={`products-cart ${props.show}`}>
         <div className="cart-header">
