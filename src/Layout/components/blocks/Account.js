@@ -1,10 +1,16 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import "./style/login.scss";
 import {Link} from "react-router-dom";
 import firebase from "firebase";
+import Error from "../../../404Error";
 
-//login
-export const Login = (p) => {
+/**
+ * Function that handles UserLogin.
+ * @param {Email, Password} - User Data to check if user recorded.
+ * @returns { User Status } - Send User Data to firebase auth system to check if user registered & get user status and full user data.
+**/
+
+const Login = (p) => {
   const [values, setForm] = useState({});
   const [error, setError] = useState("")
   const auth = firebase.auth();
@@ -30,13 +36,17 @@ export const Login = (p) => {
     }).catch(error => {
       setError(errs[error.message]);
     });
-  }
+  };
+
+  useEffect(() => {
+    document.title = "Login - Fashe";
+  });
 
   return (
       <div className="login">
         <div className="login-form">
           <div className="logo">
-            <Link to="/"><img src="./img/icon/logo.png" alt=""/></Link>
+            <Link to="/"><img src="/img/icon/logo.png" alt="logo"/></Link>
           </div>
           <div className="header">
             <h2>log in</h2>
@@ -60,7 +70,7 @@ export const Login = (p) => {
                     onChange={(e) => setForm({...values, password: e.target.value})}
                     placeholder="Password"
                 />
-                <Link className="forgot-password-btn" to="/reset-password">forgot password?</Link>
+                <Link className="forgot-password-btn" to="/user/reset">forgot password?</Link>
               </div>
             </div>
             <button onClick={(e) => {
@@ -75,7 +85,7 @@ export const Login = (p) => {
           </div>
           <div className="create-account">
             <p>
-              You don't have an account? <Link className="create-acc-btn" to="/register">Create one</Link>
+              You don't have an account? <Link className="create-acc-btn" to="/user/register">Create one</Link>
             </p>
           </div>
         </div>
@@ -83,8 +93,13 @@ export const Login = (p) => {
   );
 };
 
-//the registration
-export const Register = (p) => {
+/**
+ * Function that handles UserRegister.
+ * @param {Email, Password, FullName} - User Data to create new account for him.
+ * @returns { Register Status } - Send User Data to firebase auth system to create new account.
+**/
+
+const Register = (p) => {
   const [values, setForm] = useState({});
   const [error, setError] = useState("")
   const auth = firebase.auth();
@@ -132,11 +147,15 @@ export const Register = (p) => {
     }).catch((error) => console.log(error));
   };
 
+  useEffect(() => {
+    document.title = "Sign Up - Fashe";
+  });
+
   return (
       <div className="login">
         <div className="login-form">
           <div className="logo">
-            <Link to="/"><img src="./img/icon/logo.png" alt=""/></Link>
+            <Link to="/"><img src="/img/icon/logo.png" alt=""/></Link>
           </div>
           <div className="header">
             <h2>register</h2>
@@ -187,7 +206,13 @@ export const Register = (p) => {
   );
 };
 
-export const ForgetPassword = p => {
+/**
+ * Function that handles ForgetPassword.
+ * @param {Email} - User email to check if user recorded & send changePasswordEmail.
+ * @returns { void }
+**/
+
+const ForgetPassword = (p) => {
   const [values, setForm] = useState({});
   const [error, setError] = useState("")
   const auth = firebase.auth();
@@ -206,12 +231,17 @@ export const ForgetPassword = p => {
     }).catch(error =>
         setError(errs[error.message])
     )
-  }
+  };
+
+  useEffect(() => {
+    document.title = "Reset - Fashe";
+  })
+
   return (
       <div className="login">
         <div className="login-form">
           <div className="logo">
-            <Link to="/"><img src="./img/icon/logo.png" alt=""/></Link>
+            <Link to="/"><img src="/img/icon/logo.png" alt=""/></Link>
           </div>
           <div className="header">
             <h2>Reset Password</h2>
@@ -236,10 +266,35 @@ export const ForgetPassword = p => {
             </button>
             <span className="remember">
               Remember your password ?
-              <Link to="/login" className="log-back"> Back to login</Link>
+              <Link to="/user/login" className="log-back"> Back to login</Link>
             </span>
           </div>
         </div>
       </div>
   );
+}
+
+/**
+ * Function that handles UserRoutes.
+ * @param {Route PathName} - The PathName required.
+ * @returns { Selected Component } - Show specific function that required by user.
+**/
+
+export default (props)=> {
+  console.log(props)
+  let location = props.location.pathname;
+
+  switch(location) {
+    case "/user/login":
+      return <Login p={props} />
+
+    case "/user/register":
+      return <Register p={props} />
+
+    case "/user/reset":
+      return <ForgetPassword p={props} />
+
+    default:
+      return <Error />
+  }
 }

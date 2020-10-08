@@ -1,10 +1,15 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Container, Row, Col } from "react-bootstrap";
 //
 import Footer from "../Footer";
 import "./style/about.scss";
 import NavBar from "../NavBar";
 const About = () => {
+
+
+  useEffect(() => {
+    document.title = "About - Fashe"
+  });
   return (
     <div className="About">
       <NavBar />

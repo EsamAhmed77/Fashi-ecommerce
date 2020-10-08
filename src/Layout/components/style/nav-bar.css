@@ -157,18 +157,25 @@
         .bot-nav-bar .navbar .bnb-left-area .products-cart .cart .info {
           color: rgba(0, 0, 0, 0.75);
           font-size: 13px;
-          font-family: "Regular"; }
+          font-family: "Regular", sans-serif; }
         .bot-nav-bar .navbar .bnb-left-area .products-cart .cart .total {
           font-size: 15px; }
         .bot-nav-bar .navbar .bnb-left-area .products-cart .cart .all-products .product {
           line-height: 1;
           border-bottom: 1px solid #cdcdcd;
-          padding: 10px 0 12px;
-          margin: 5px 0; }
+          display: flex;
+          padding: 10px 15px 10px 0; }
+          .bot-nav-bar .navbar .bnb-left-area .products-cart .cart .all-products .product img {
+            width: 70px;
+            margin-right: 15px; }
           .bot-nav-bar .navbar .bnb-left-area .products-cart .cart .all-products .product .product-info {
-            font-family: Regular;
+            font-family: "Regular", sans-serif;
             color: #343434;
-            font-size: 15px; }
+            font-size: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            width: 100%; }
           .bot-nav-bar .navbar .bnb-left-area .products-cart .cart .all-products .product .quantity button {
             border: none;
             outline: none;

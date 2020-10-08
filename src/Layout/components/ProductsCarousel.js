@@ -49,7 +49,7 @@ export default () => {
                           </div>
                           <img className="w-100" src={src} alt="" />
                           <button onClick={() => {
-                            discount? postCart({title, quantity:1 ,total:discount, price:discount}, id) : postCart({price, quantity:1, total:price, title}, id);
+                            discount? postCart({title, src, quantity:1 ,total:discount, price:discount}, id) : postCart({price, src, quantity:1, total:price, title}, id);
 
                           }} className="add-btn">
                             add to cart
